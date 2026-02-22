@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm, sophisticated neutral palette */
+    --background: 40 20% 98%;
+    --foreground: 30 10% 15%;
+
+    --card: 40 15% 96%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 40 20% 98%;
+    --popover-foreground: 30 10% 15%;
+
+    /* Deep charcoal as primary */
+    --primary: 30 8% 18%;
+    --primary-foreground: 40 20% 98%;
+
+    /* Warm cream for secondary */
+    --secondary: 38 25% 92%;
+    --secondary-foreground: 30 10% 15%;
+
+    /* Soft muted tones */
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 8% 45%;
+
+    /* Gold accent */
+    --accent: 38 60% 55%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 20% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 38 60% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom design tokens */
+    --cream: 40 30% 95%;
+    --warm-white: 40 20% 98%;
+    --charcoal: 30 8% 18%;
+    --charcoal-light: 30 8% 25%;
+    --gold: 38 60% 55%;
+    --gold-light: 38 50% 70%;
+    --taupe: 35 12% 60%;
+    --beige: 35 25% 85%;
+
+    /* Sidebar */
+    --sidebar-background: 40 20% 98%;
+    --sidebar-foreground: 30 10% 15%;
+    --sidebar-primary: 30 8% 18%;
+    --sidebar-primary-foreground: 40 20% 98%;
+    --sidebar-accent: 38 25% 92%;
+    --sidebar-accent-foreground: 30 10% 15%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 38 60% 55%;
+  }
+
+  .dark {
+    --background: 30 8% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 30 8% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 30 8% 8%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 40 20% 95%;
+    --primary-foreground: 30 8% 12%;
+
+    --secondary: 30 8% 18%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 30 8% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 38 60% 55%;
+    --accent-foreground: 30 8% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 30 8% 20%;
+    --input: 30 8% 20%;
+    --ring: 38 60% 55%;
+
+    --sidebar-background: 30 8% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 38 60% 55%;
+    --sidebar-primary-foreground: 30 8% 8%;
+    --sidebar-accent: 30 8% 15%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 30 8% 20%;
+    --sidebar-ring: 38 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--taupe));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--charcoal-light));
+}

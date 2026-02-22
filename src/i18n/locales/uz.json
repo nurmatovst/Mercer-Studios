@@ -1,0 +1,313 @@
+{
+  "nav": {
+    "about": "Biz haqimizda",
+    "approach": "Yondashuv",
+    "services": "Xizmatlar",
+    "projects": "Loyihalar",
+    "contact": "Aloqa",
+    "home": "Bosh sahifa",
+    "startProject": "Loyihani boshlash"
+  },
+  "hero": {
+    "subtitle": "Ichki dizayn va arxitektura studiyasi",
+    "title1": "Biz yaratamiz makonlarni",
+    "meaningful": "ma'noli",
+    "and": "va",
+    "beautiful": "go'zal",
+    "description": "Nozik estetikani o'ylangan funksionallik bilan uyg'unlashtirgan holda, biz shaxsiy, abadiy va kontekstga bog'langan muhitlarni yaratamiz.",
+    "viewWork": "Ishlarimiz",
+    "getInTouch": "Bog'lanish",
+    "scroll": "Pastga"
+  },
+  "about": {
+    "label": "Biz haqimizda",
+    "title": "Biz ishonamizki, eng go'zal makonlar",
+    "titleHighlight": "o'zida yashovchilar bilan gaplashadi",
+    "paragraph1": "Mercer Studiosda biz ishonamizki, eng go'zal makonlar — bu o'zida yashovchilar bilan gaplashadigan makonlar — nafaqat yaxshi ko'rinadigan, balki to'g'ri his etiladigan joylar.",
+    "paragraph2": "Bizning dizayn falsafamiz har bir loyihada uyg'unlik, mutanosiblik va maqsadli hikoya qilishni birlashtiradi. Biz shunchaki namoyish joylari emas — biz qulaylik, muloqot va hayotga taklif qiladigan boshpanalar yaratamiz.",
+    "paragraph3": "Har bir loyiha kontekstga chuqur ildiz otgan, detallarga e'tibor bilan yaratilgan va mijozlarimizning turmush tarzi va intilishlari asosida shakllantirilgan.",
+    "quote": "Dizayn — bu shunchaki qanday ko'rinishi va his etilishi emas. Dizayn — bu qanday ishlashi."
+  },
+  "approach": {
+    "label": "Bizning yondashuv",
+    "title": "Qanday ishlaymiz",
+    "collaborative": {
+      "title": "Hamkorlikda + Mijozga yo'naltirilgan",
+      "description": "Biz sizning ko'rinishingiz, turmush tarzingiz va ehtiyojlaringizni tushunishdan boshlaymiz, shunda makoningiz sizni aks ettiradi."
+    },
+    "holistic": {
+      "title": "Yaxlit dizayn",
+      "description": "Bizning ishimiz arxitektura, ichki dizayn, materiallar, yoritish va fazoviy oqimni birlashtiradi."
+    },
+    "timeless": {
+      "title": "Abadiy mahorat",
+      "description": "Biz muvozanatlangan mutanosibliklar, nozik material tanlovlari va vaqt sinoviga bardosh beradigan sirtlarni qadrlaymiz."
+    },
+    "personal": {
+      "title": "Shaxsiy va funksional",
+      "description": "Makoningizning har bir burchagi ham ma'noli, ham amaliy bo'lishi uchun ataylab loyihalangan."
+    }
+  },
+  "services": {
+    "label": "Xizmatlar",
+    "title": "Biz nima taklif qilamiz",
+    "description": "Sizning ko'rinishingizni haqiqatga aylantirish uchun moslashtirilgan keng qamrovli dizayn yechimlari.",
+    "residential": "Turar-joy ichki dizayni",
+    "architecture": "Maxsus arxitektura + makon rejalashtirish",
+    "rendering": "3D renderlash va vizualizatsiya",
+    "materials": "Materiallar va pardozlarni tanlash",
+    "furniture": "Buyurtma mebel va xususiyatlar dizayni",
+    "management": "Loyihani boshqarish va amalga oshirish"
+  },
+  "projectsSection": {
+    "label": "Portfolio",
+    "title": "Tanlangan loyihalar",
+    "description": "Nozik nafosatlik va o'ylangan yashashning o'ziga xos aralashmasini aks ettiradigan tanlangan loyihalar to'plamini o'rganing.",
+    "viewAll": "Barcha loyihalar"
+  },
+  "projects": {
+    "sereneSanctuary": {
+      "title": "Tinch boshpana",
+      "description": "Tabiiy yorug'lik va organik teksturali osoyishta yotoqxona.",
+      "fullDescription": "Ushbu London rezidensiyasi asosiy yotoqxonani tinch boshpanaga aylantiradi. Biz tabiiy materiallarni — zig'ir, eman va toshni — ehtiyotkorlik bilan tanladik, nafas oladigan xotirjamlik makonini yaratish uchun."
+    },
+    "modernHeritage": {
+      "title": "Zamonaviy meros",
+      "description": "Marmar nafosligi va iliq yog'och ohanglarini birlashtirgan zamonaviy oshxona.",
+      "fullDescription": "Parijning markazida biz binoning merosini hurmat qiladigan va zamonaviy hayotni qabul qiladigan oshxona yaratdik. Kalakatta marmar sirtlari iliq yong'oq mebellarini uchratib, eski va yangi o'rtasida dialog yaratadi."
+    },
+    "artisanLiving": {
+      "title": "Hunarmand hayoti",
+      "description": "San'at va haykaliy mebellarni nishonlaydigan kuratsiyalangan yashash makoni.",
+      "fullDescription": "Ushbu Milan kvartirasi yaxshi yashash san'atini nishonlaydi. Biz makonni mijozning to'plami uchun galereya sifatida loyihalashtirdik, funktsional haykallar sifatida xizmat qiladigan noyob mebel buyumlari bilan."
+    },
+    "spaRetreat": {
+      "title": "Spa boshpanasi",
+      "description": "Tabiiy tosh va osoyishta muhitga ega spa uslubidagi hammom.",
+      "fullDescription": "Shveytsariya Alp salomatlik an'analaridan ilhomlangan ushbu hammom kundalik spa tajribasiga aylanadi. Tabiiy travertin, isitilgan pollar va integral bug' xususiyatlari tiklanish uchun makon yaratadi."
+    },
+    "grandAtrium": {
+      "title": "Buyuk atrium",
+      "description": "Haykaliy yoritish va marmarli hashamatli mehmonxona lobbisi.",
+      "fullDescription": "Ushbu Dubay mehmonxona lobbisi bosmasdan ta'sir qoldiradi. Uch balandlikdagi atrium tushadigan suvga o'xshash maxsus haykaliy lyustraga ega. Italiya marmari pollari atrofdagi yorug'likni aks ettiradi."
+    },
+    "executiveStudy": {
+      "title": "Rahbar kabineti",
+      "description": "Buyurtma asosida ishlangan mebel va iliq muhitga ega nozik uy ofisi.",
+      "fullDescription": "Manhetten rahbari uchun biz professionallik va shaxsiy qulaylikni muvozanatlashtiradigan uy ofisini loyihalashtirdik. Poldan shiftgacha yong'oq mebellari keng kutubxonani joylashtiradi."
+    },
+    "intimateGathering": {
+      "title": "Samimiy yig'ilishlar",
+      "description": "Mazmunli suhbatlar uchun mo'ljallangan minimalist ovqatlanish xonasi.",
+      "fullDescription": "Ushbu Kopengagen ovqatlanish xonasi Skandinaviya dizayn falsafasini ifodalaydi — har bir element o'z maqsadiga xizmat qiladi va go'zallik oddiylikdan tug'iladi. Buyurtma asosidagi eman stol o'n kishini qulay joylashtiradi."
+    },
+    "honey": {
+      "title": "Asal",
+      "description": "Tabiiy teksturalar va yumshoq yoritish bilan ishlatiladigan issiq va qabul qiluvchan joy.",
+      "fullDescription": "Ushbu uyda ishlatiladigan qulay yashash maydoni, ishlatiladigan issiq qo'lga olish sifatida loyihalangan. Tabiiy yovvoyi tonlar, yumshoq tekstilar va ishlatiladigan yoritish qulaylik va tinchlik atmosferasini yaratadi. Dizayn asalning ishqoni bilan ilhomlanadi, joyga uy va tinchlik hissi beradi."
+    },
+    "kidsRoom": {
+      "title": "Bolalar Xonasi",
+      "description": "Tabiiy materiallar bilan o'yinchi va funksional bolalar xonasi.",
+      "fullDescription": "Ushbu Londondagi bolalar xonasi o'yinchi va funksionallikni birlashtiradi. Tabiiy yovvoyi elementlar, yumshoq tekstilar va zavqlantiruvchi ranglar, qulay va amaliy joy yaratadi. Dizayn yaratuvchanlikni qo'llab-quvvatlaydi, lekin tinchlik va qulaylik hissini saqlaydi."
+    },
+    "hallway": {
+      "title": "Koridor",
+      "description": "Tabiiy materiallar va yumshoq yoritish bilan tinch va qabul qiluvchan koridor.",
+      "fullDescription": "Ushbu Londondagi koridor qabul qiluvchan o'tish maydoni sifatida loyihalangan. Tabiiy yovvoyi tonlar, yumshoq yoritish va e'tibor bilan tanlangan teksturalar tinchlik va qulaylik atmosferasini yaratadi. Dizayn har bir uy maydonida ijobiy birinchi ta'sir yaratish muhimligini aks ettiradi."
+    }
+  },
+  "projectDetail": {
+    "backToProjects": "Loyihalarga qaytish",
+    "details": "Loyiha tafsilotlari",
+    "location": "Joylashuv",
+    "year": "Yil",
+    "area": "Maydon",
+    "duration": "Davomiylik",
+    "scope": "Ko'lam",
+    "gallery": "Loyiha galereyasi",
+    "previous": "Oldingi loyiha",
+    "next": "Keyingi loyiha"
+  },
+  "whyChoose": {
+    "label": "Nima uchun biz",
+    "title": "Mercer Studios afzalligi",
+    "benefits": {
+      "personalized": "Turmush tarzingizga moslashtirilgan shaxsiylashtirilgan dizayn yechimlari",
+      "proportion": "Mutanosiblik, muvozanat va fazoviy uyg'unlikka e'tibor",
+      "craft": "Mahorat, sifat va detallarga chuqur sadoqat",
+      "timeless": "Trendga emas, abadiylikka yo'naltirilgan loyihalar",
+      "seamless": "Arxitektura va interierlarning uzluksiz integratsiyasi"
+    },
+    "cta": "Loyihani boshlash"
+  },
+  "contactSection": {
+    "label": "Aloqa",
+    "title": "Keling, hamkorlik qilaylik",
+    "description": "Ko'rinishingizni hayotga keltirmoqchimisiz? Konsultatsiya uchun biz bilan bog'laning va biz qanday qilib ajoyib va o'zingizniki bo'lgan makonni loyihalashimiz mumkinligini bilib oling.",
+    "email": "Email",
+    "phone": "Telefon",
+    "location": "Manzil",
+    "form": {
+      "name": "Ism",
+      "namePlaceholder": "Ismingiz",
+      "email": "Email",
+      "emailPlaceholder": "sizning@email.com",
+      "subject": "Mavzu",
+      "subjectPlaceholder": "Loyiha so'rovi",
+      "message": "Xabar",
+      "messagePlaceholder": "Loyihangiz haqida aytib bering...",
+      "send": "Xabar yuborish"
+    }
+  },
+  "footer": {
+    "description": "Ma'noli va go'zal funksional makonlar yaratish. Butun dunyo bo'ylab talabchan mijozlar uchun ichki dizayn va arxitektura.",
+    "quickLinks": "Tezkor havolalar",
+    "followUs": "Bizni kuzating",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Xizmat ko'rsatish shartlari"
+  },
+  "projectsPage": {
+    "label": "Portfolio",
+    "title": "Bizning loyihalar",
+    "description": "Har bir makon — bu hikoya — shaxsiyat, tarix va maqsadli dizayn ifodasi.",
+    "all": "Barchasi",
+    "residential": "Turar-joy",
+    "hospitality": "Mehmondo'stlik",
+    "commercial": "Tijorat",
+    "viewProject": "Loyihani ko'rish",
+    "cta": {
+      "title": "Loyihangizni boshlashga tayyormisiz?",
+      "description": "Keling, faqat sizniki bo'lgan makon yaratish uchun hamkorlik qilaylik.",
+      "button": "Loyihani boshlash"
+    }
+  },
+  "startProject": {
+    "backHome": "Bosh sahifaga",
+    "label": "Loyiha konfiguratori",
+    "title": "Loyihani boshlash",
+    "description": "Ko'rinishingiz haqida ayting. Loyiha sozlamalarini moslashtiring va ehtiyojlaringizga moslashtirilgan shaxsiy taklif oling.",
+    "freeConsultation": {
+      "label": "Bepul konsultatsiya",
+      "title": "Bepul dizayn konsultatsiyasini oling",
+      "description": "Qayerdan boshlashni bilmayapsizmi? Dizayn mutaxassislarimiz bilan bepul 30 daqiqalik konsultatsiyaga yoziling. Biz sizning ko'rinishingizni muhokama qilamiz, savollarga javob beramiz va orzu makoningizni qanday hayotga keltirishimiz mumkinligini tushunishga yordam beramiz.",
+      "benefits": {
+        "1": "Majburiyatsiz, butunlay bepul",
+        "2": "Loyihangiz bo'yicha ekspert maslahati",
+        "3": "Shaxsiylashtirilgan tavsiyalar",
+        "4": "Jarayonimizni tushunish"
+      },
+      "button": "Bepul konsultatsiyaga yozilish"
+    },
+    "steps": {
+      "type": "Tur",
+      "style": "Uslub",
+      "colors": "Ranglar",
+      "details": "Tafsilotlar",
+      "contact": "Aloqa"
+    },
+    "step1": {
+      "title": "Qanday turdagi loyihani rejalashtirmoqdasiz?",
+      "residential": "Turar-joy",
+      "residentialDesc": "Uy interierlari, kvartiralar, villalar",
+      "hospitality": "Mehmondo'stlik",
+      "hospitalityDesc": "Mehmonxonalar, restoranlar, launjlar",
+      "commercial": "Tijorat",
+      "commercialDesc": "Ofislar, do'konlar, showroomlar",
+      "renovation": "Renovatsiya",
+      "renovationDesc": "Mavjud makonlarni o'zgartirish"
+    },
+    "step2": {
+      "title": "Qaysi uslub sizga yoqadi?",
+      "minimalist": "Minimalizm",
+      "minimalistDesc": "Toza chiziqlar, oddiylik, kamroq — ko'proq",
+      "luxury": "Hashamatli",
+      "luxuryDesc": "Dabdabali materiallar, boy teksturalar, ulug'vorlik",
+      "elegant": "Nafis",
+      "elegantDesc": "Nozik, zamonaviy, abadiy go'zallik",
+      "contemporary": "Zamonaviy",
+      "contemporaryDesc": "Dolzarb trendlar, jasur qarorlar",
+      "rustic": "Rustik",
+      "rusticDesc": "Tabiiy materiallar, iliqlik, haqiqiylik",
+      "industrial": "Industrial",
+      "industrialDesc": "Xom materiallar, shahar uslubi, ochiq elementlar"
+    },
+    "step3": {
+      "title": "Rang palitrasini tanlang",
+      "neutral": "Iliq neytral",
+      "monochrome": "Monoxrom",
+      "earth": "Yer tonlari",
+      "coastal": "Dengiz",
+      "forest": "O'rmon",
+      "blush": "Pushti va oltin"
+    },
+    "step4": {
+      "title": "Loyiha tafsilotlari",
+      "budget": "Byudjet (USD)",
+      "budgetPlaceholder": "Byudjetingizni kiriting",
+      "size": "Loyiha maydoni (kv.m)",
+      "sizePlaceholder": "Loyiha maydonini kiriting",
+      "timeline": "Loyiha muddati",
+      "flexible": "Boshqa",
+      "flexibleDesc": "Aniq muddat yo'q",
+      "3months": "2 hafta",
+      "3monthsDesc": "Tez natija kerak",
+      "6months": "1 oy",
+      "6monthsDesc": "Standart muddat",
+      "12months": "3+ oy",
+      "12monthsDesc": "Bosqichli murakkab loyiha"
+    },
+    "step5": {
+      "title": "Shaxsiy taklifingizni oling",
+      "description": "Kontakt ma'lumotlaringizni qoldiring va biz 24-48 soat ichida sozlamalaringizga asoslangan maxsus taklif bilan bog'lanamiz.",
+      "summary": "Loyihangiz xulosasi",
+      "projectType": "Loyiha turi",
+      "style": "Uslub",
+      "colorPalette": "Rang palitrasi",
+      "timeline": "Muddat",
+      "budget": "Byudjet",
+      "name": "Ism",
+      "namePlaceholder": "Ismingiz",
+      "email": "Email",
+      "emailPlaceholder": "sizning@email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+998 90 123 4567",
+      "message": "Qo'shimcha tafsilotlar (ixtiyoriy)",
+      "messagePlaceholder": "Loyihangiz ko'rinishi, maxsus talablar yoki savollar haqida ko'proq ayting..."
+    },
+    "buttons": {
+      "back": "Orqaga",
+      "continue": "Davom etish",
+      "getQuote": "Taklif olish",
+      "submitting": "Yuborilmoqda..."
+    },
+    "toast": {
+      "errorTitle": "Iltimos, majburiy maydonlarni to'ldiring",
+      "errorDescription": "Ism va email majburiy.",
+      "successTitle": "So'rovingiz uchun rahmat!",
+      "successDescription": "Biz 24-48 soat ichida shaxsiy taklif bilan bog'lanamiz."
+    }
+  },
+  "consultation": {
+    "back": "Konfiguratorga qaytish",
+    "title": "Bepul konsultatsiyaga yoziling",
+    "subtitle": "Qulay vaqtni tanlang yoki to'g'ridan-to'g'ri biz bilan bog'laning.",
+    "calendly": {
+      "title": "Qo'ng'iroqni rejalashtirish",
+      "subtitle": "Sizga qulay vaqtni tanlang",
+      "placeholder": "Calendly bronlash vidjeti shu yerda ko'rinadi",
+      "instruction": "Calendly URL manzilini almashtiring"
+    },
+    "contact": {
+      "title": "To'g'ridan-to'g'ri aloqani afzal ko'rasizmi?",
+      "subtitle": "Istalgan qulay usul orqali biz bilan bog'laning, 24 soat ichida javob beramiz.",
+      "phone": "Telefon",
+      "email": "Email"
+    },
+    "info": {
+      "title": "Nimani kutish kerak",
+      "description": "30 daqiqalik konsultatsiya davomida biz sizning ko'rinishingizni muhokama qilamiz, savollarga javob beramiz va orzu makoningizni qanday hayotga keltirishimiz mumkinligini o'rganamiz. Majburiyatsiz, faqat ekspert maslahatlari."
+    }
+  }
+}

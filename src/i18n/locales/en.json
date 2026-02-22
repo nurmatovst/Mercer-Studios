@@ -1,0 +1,311 @@
+{
+  "nav": {
+    "about": "About",
+    "approach": "Approach",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "home": "Home",
+    "startProject": "Start Project"
+  },
+  "hero": {
+    "subtitle": "Interior Design & Architecture Studio",
+    "title1": "Creating Spaces That Are Both",
+    "meaningful": "Meaningful",
+    "and": "and",
+    "beautiful": "Beautiful",
+    "description": "By blending refined aesthetics with thoughtful functionality, we craft environments that feel personal, timeless, and connected to their context.",
+    "viewWork": "View Our Work",
+    "getInTouch": "Get In Touch",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "We Believe The Most Beautiful Spaces",
+    "titleHighlight": "Speak to Those Who Live in Them",
+    "paragraph1": "At Mercer Studios, we believe the most beautiful spaces are those that speak to the people who live in them — not just spaces that look good, but those that feel right.",
+    "paragraph2": "Our design philosophy blends harmony, proportion, and intentional storytelling in every project. We don't create spaces that are merely showpieces — we create sanctuaries that invite comfort, conversation, and living.",
+    "paragraph3": "Every project is deeply rooted in context, crafted with attention to detail, and shaped by our clients' lifestyles and aspirations.",
+    "quote": "Design is not just what it looks like and feels like. Design is how it works."
+  },
+  "approach": {
+    "label": "Our Approach",
+    "title": "How We Work",
+    "collaborative": {
+      "title": "Collaborative + Client-Driven",
+      "description": "We begin by understanding your vision, lifestyle and needs, ensuring your space reflects who you are."
+    },
+    "holistic": {
+      "title": "Holistic Design",
+      "description": "Our work integrates architecture, interior design, materials, lighting, and spatial flow."
+    },
+    "timeless": {
+      "title": "Timeless Craftsmanship",
+      "description": "We value balanced proportions, refined material choices, and tactile finishes that stand the test of time."
+    },
+    "personal": {
+      "title": "Personal & Functional",
+      "description": "Every corner of your space is deliberately designed to be both meaningful and practical."
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "What We Offer",
+    "description": "Comprehensive design solutions tailored to transform your vision into reality.",
+    "residential": "Residential Interior Design",
+    "architecture": "Custom Architecture + Space Planning",
+    "rendering": "3D Rendering & Visualisation",
+    "materials": "Materials & Finishes Selection",
+    "furniture": "Bespoke Furniture & Feature Design",
+    "management": "Project Management & Implementation"
+  },
+  "projectsSection": {
+    "label": "Portfolio",
+    "title": "Selected Projects",
+    "description": "Explore a curated selection of projects that reflect our signature blend of refined elegance and thoughtful living.",
+    "viewAll": "View All Projects"
+  },
+  "projects": {
+    "sereneSanctuary": {
+      "title": "Serene Sanctuary",
+      "description": "A tranquil bedroom retreat with natural light and organic textures.",
+      "fullDescription": "This London residence transforms the master suite into a peaceful sanctuary. We carefully curated natural materials—linen, oak, and stone—to create a space that breathes tranquility. The design emphasizes the connection between indoor and outdoor spaces, with floor-to-ceiling windows flooding the room with soft, natural light throughout the day."
+    },
+    "modernHeritage": {
+      "title": "Modern Heritage",
+      "description": "Contemporary kitchen blending marble elegance with warm wood tones.",
+      "fullDescription": "In the heart of Paris, we crafted a kitchen that honors the building's heritage while embracing contemporary living. Calacatta marble surfaces meet warm walnut cabinetry, creating a dialogue between old and new. Every detail, from the custom bronze hardware to the integrated lighting, was designed to elevate daily rituals."
+    },
+    "artisanLiving": {
+      "title": "Artisan Living",
+      "description": "A curated living space celebrating art and sculptural furniture.",
+      "fullDescription": "This Milanese apartment celebrates the art of living well. We designed the space as a gallery for the client's collection, with bespoke furniture pieces that serve as functional sculptures. The neutral palette allows the artwork to take center stage while maintaining warmth and intimacy."
+    },
+    "spaRetreat": {
+      "title": "Spa Retreat",
+      "description": "A spa-inspired bathroom with natural stone and serene atmosphere.",
+      "fullDescription": "Inspired by Swiss alpine wellness traditions, this bathroom becomes a daily spa experience. Natural travertine, heated floors, and integrated steam features create a space for restoration. The minimalist design focuses on sensory experiences—the texture of stone, the warmth of water, the quality of light."
+    },
+    "grandAtrium": {
+      "title": "Grand Atrium",
+      "description": "A luxurious hotel lobby featuring sculptural lighting and marble.",
+      "fullDescription": "This Dubai hotel lobby makes a statement without overwhelming. The triple-height atrium features a custom sculptural chandelier that cascades like falling water. Italian marble floors reflect the ambient light, while intimate seating areas invite guests to pause and appreciate the architecture."
+    },
+    "executiveStudy": {
+      "title": "Executive Study",
+      "description": "A sophisticated home office with custom millwork and warm ambiance.",
+      "fullDescription": "For a Manhattan executive, we designed a home office that balances professionalism with personal comfort. Floor-to-ceiling walnut millwork houses an extensive library while concealing modern technology. The space respects the building's Art Deco heritage while serving contemporary work patterns."
+    },
+    "intimateGathering": {
+      "title": "Intimate Gathering",
+      "description": "A minimalist dining space designed for meaningful conversations.",
+      "fullDescription": "This Copenhagen dining room embodies Nordic design philosophy—every element serves a purpose, and beauty emerges from simplicity. The custom oak table seats ten comfortably, while pendant lighting creates an intimate atmosphere. The space seamlessly connects to the kitchen, facilitating the Danish tradition of hygge."
+    },
+    "honey": {
+      "title": "Honey",
+      "description": "A warm and inviting space with natural textures and soft lighting.",
+      "fullDescription": "This London residence features a cozy living area designed to feel like a warm embrace. Natural wood tones, soft textiles, and warm lighting create an atmosphere of comfort and tranquility. The design draws inspiration from the warmth of honey, bringing a sense of home and serenity to the space."
+    },"kidsRoom": {
+      "title": "Kids Room",
+      "description": "A playful and functional children's bedroom with natural materials.",
+      "fullDescription": "This London kids' room combines playfulness with functionality. Natural wood elements, soft textures, and vibrant colors create a space that is both inviting and practical. The design encourages creativity while maintaining a sense of calm and comfort."
+    },"hallway": {
+      "title": "Hallway",
+      "description": "A serene and welcoming hallway with natural materials and soft lighting.",
+      "fullDescription": "This London hallway is designed to be a welcoming transition space. Natural wood tones, soft lighting, and carefully selected textures create an atmosphere of calm and comfort. The design emphasizes the importance of creating a positive first impression in any residential space."
+    }
+  },
+  "projectDetail": {
+    "backToProjects": "Back to Projects",
+    "details": "Project Details",
+    "location": "Location",
+    "year": "Year",
+    "area": "Area",
+    "duration": "Duration",
+    "scope": "Scope",
+    "gallery": "Project Gallery",
+    "previous": "Previous Project",
+    "next": "Next Project"
+  },
+  "whyChoose": {
+    "label": "Why Choose Us",
+    "title": "The Mercer Studio Difference",
+    "benefits": {
+      "personalized": "Personalized design solutions tailored to your lifestyle",
+      "proportion": "Attention to proportion, balance and spatial harmony",
+      "craft": "Deep commitment to craft, quality, and detail",
+      "timeless": "Projects that feel timeless rather than trend-driven",
+      "seamless": "Seamless integration of architecture and interiors"
+    },
+    "cta": "Start Your Project"
+  },
+  "contactSection": {
+    "label": "Contact",
+    "title": "Let's Collaborate",
+    "description": "Ready to bring your vision to life? Contact us for a consultation and discover how we can design a space that feels extraordinary and unmistakably yours.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "Creating spaces that are both meaningful and beautifully functional. Interior design & architecture for discerning clients worldwide.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "projectsPage": {
+    "label": "Portfolio",
+    "title": "Our Projects",
+    "description": "Each space is a narrative — an expression of identity, history, and purposeful design.",
+    "all": "All",
+    "residential": "Residential",
+    "hospitality": "Hospitality",
+    "commercial": "Commercial",
+    "viewProject": "View Project",
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's collaborate to create a space that's uniquely yours.",
+      "button": "Start Your Project"
+    }
+  },
+  "startProject": {
+    "backHome": "Back to Home",
+    "label": "Project Configurator",
+    "title": "Start Your Project",
+    "description": "Tell us about your vision. Customize your project preferences and receive a personalized quote tailored to your needs.",
+    "freeConsultation": {
+      "label": "Free Consultation",
+      "title": "Get a Free Design Consultation",
+      "description": "Not sure where to start? Book a complimentary 30-minute consultation with our design experts. We'll discuss your vision, answer questions, and help you understand how we can bring your dream space to life.",
+      "benefits": {
+        "1": "No obligation, completely free",
+        "2": "Expert advice on your project",
+        "3": "Personalized recommendations",
+        "4": "Understand our process"
+      },
+      "button": "Book Free Consultation"
+    },
+    "steps": {
+      "type": "Type",
+      "style": "Style",
+      "colors": "Colors",
+      "details": "Details",
+      "contact": "Contact"
+    },
+    "step1": {
+      "title": "What type of project are you planning?",
+      "residential": "Residential",
+      "residentialDesc": "Home interiors, apartments, villas",
+      "hospitality": "Hospitality",
+      "hospitalityDesc": "Hotels, restaurants, lounges",
+      "commercial": "Commercial",
+      "commercialDesc": "Offices, retail spaces, showrooms",
+      "renovation": "Renovation",
+      "renovationDesc": "Transforming existing spaces"
+    },
+    "step2": {
+      "title": "What style resonates with you?",
+      "minimalist": "Minimalist",
+      "minimalistDesc": "Clean lines, simplicity, less is more",
+      "luxury": "Luxury",
+      "luxuryDesc": "Opulent materials, rich textures, grandeur",
+      "elegant": "Elegant",
+      "elegantDesc": "Refined, sophisticated, timeless beauty",
+      "contemporary": "Contemporary",
+      "contemporaryDesc": "Current trends, bold statements",
+      "rustic": "Rustic",
+      "rusticDesc": "Natural materials, warmth, authenticity",
+      "industrial": "Industrial",
+      "industrialDesc": "Raw materials, urban edge, exposed elements"
+    },
+    "step3": {
+      "title": "Choose your color palette",
+      "neutral": "Warm Neutrals",
+      "monochrome": "Monochrome",
+      "earth": "Earth Tones",
+      "coastal": "Coastal",
+      "forest": "Forest",
+      "blush": "Blush & Gold"
+    },
+    "step4": {
+      "title": "Project details",
+      "budget": "Budget (USD)",
+      "budgetPlaceholder": "Enter your budget",
+      "size": "Project Size (sq.m)",
+      "sizePlaceholder": "Enter your project size",
+      "timeline": "Project Timeline",
+      "flexible": "Other",
+      "flexibleDesc": "No specific deadline",
+      "3months": "2 Weeks",
+      "3monthsDesc": "Quick turnaround needed",
+      "6months": "1 Month",
+      "6monthsDesc": "Standard timeline",
+      "12months": "3+ Months",
+      "12monthsDesc": "Complex project with phases"
+    },
+    "step5": {
+      "title": "Get Your Personalized Quote",
+      "description": "Leave your contact details and we'll reach out within 24-48 hours with a customized proposal based on your preferences.",
+      "summary": "Your Project Summary",
+      "projectType": "Project Type",
+      "style": "Style",
+      "colorPalette": "Color Palette",
+      "timeline": "Timeline",
+      "budget": "Budget",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 890",
+      "message": "Additional details (optional)",
+      "messagePlaceholder": "Tell us more about your project vision, specific requirements, or any questions..."
+    },
+    "buttons": {
+      "back": "Back",
+      "continue": "Continue",
+      "getQuote": "Get My Quote",
+      "submitting": "Submitting..."
+    },
+    "toast": {
+      "errorTitle": "Please fill in required fields",
+      "errorDescription": "Name and email are required.",
+      "successTitle": "Thank you for your inquiry!",
+      "successDescription": "We'll get back to you within 24-48 hours with a personalized quote."
+    }
+  },
+  "consultation": {
+    "back": "Back to Project Configurator",
+    "title": "Book Your Free Consultation",
+    "subtitle": "Choose a convenient time slot or reach out directly through your preferred channel.",
+    "calendly": {
+      "title": "Schedule a Call",
+      "subtitle": "Pick a time that works for you",
+      "placeholder": "Calendly booking widget will appear here",
+      "instruction": "Replace with your Calendly embed URL"
+    },
+    "contact": {
+      "title": "Prefer Direct Contact?",
+      "subtitle": "Reach out through any of these channels and we'll respond within 24 hours.",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "info": {
+      "title": "What to Expect",
+      "description": "During your 30-minute consultation, we'll discuss your vision, answer any questions, and explore how we can bring your dream space to life. No obligations, just expert guidance."
+    }
+  }
+}
