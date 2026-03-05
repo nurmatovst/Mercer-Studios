@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
@@ -14,19 +13,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const { lng } = useParams();
-  const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const validLanguages = ["en", "uz", "ru"];
-    if (lng && validLanguages.includes(lng)) {
-      if (i18n.language !== lng) {
-        i18n.changeLanguage(lng);
-      }
-    } else if (lng && !validLanguages.includes(lng)) {
-      navigate("/404");
-    }
-  }, [lng, i18n, navigate]);
+  const { t } = useTranslation();
 
   return (
     <>
