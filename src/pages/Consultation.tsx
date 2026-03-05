@@ -15,6 +15,7 @@ import { useEffect } from "react";
 const Consultation = () => {
   const { t } = useTranslation();
   const { lng } = useParams(); // ✅ added lng
+    const safeLng = lng || "en"; // ✅ fallback
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -38,7 +39,7 @@ const Consultation = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6">
           <Link 
-            to="/start-project" 
+            to={`/${safeLng}/start-project`} 
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />

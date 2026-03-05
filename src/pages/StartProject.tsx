@@ -21,6 +21,7 @@ const colorPalettes = [
 
 const StartProject = () => {
   const { lng } = useParams(); // ✅ added lng
+  const safeLng = lng || "en"; // ✅ fallback
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [formData, setFormData] = useState({
@@ -187,7 +188,7 @@ const StartProject = () => {
               </div>
               <div className="flex-shrink-0">
                 <Link
-                  to="/consultation"
+                  to={`/${safeLng}/consultation`}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-charcoal text-sm tracking-widest uppercase hover:bg-gold-light transition-colors"
                 >
                   <Phone size={16} />
