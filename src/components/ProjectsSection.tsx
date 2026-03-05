@@ -80,7 +80,7 @@ const ProjectsSection = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            to="/projects"
+            to={`/${safeLng}/projects`}
             className="inline-block px-10 py-4 border border-cream/30 text-cream text-sm tracking-widest uppercase hover:bg-cream hover:text-charcoal transition-all duration-300"
           >
             {t("projectsSection.viewAll")}
