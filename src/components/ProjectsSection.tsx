@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import projectBedroom from "@/assets/bedroom/photo_2026-02-06_20-21-46.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
@@ -27,6 +27,8 @@ const projects = [
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
+    const { lng } = useParams();
+    const safeLng = lng || "en"; // ✅ fallback
 
   return (
     <section id="projects" className="section-padding bg-charcoal">
@@ -49,7 +51,7 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <Link
               key={project.titleKey}
-              to="/projects"
+              to={`/${safeLng}/projects`}
               className="group relative overflow-hidden cursor-pointer block"
             >
               <div className="aspect-[3/4] overflow-hidden">

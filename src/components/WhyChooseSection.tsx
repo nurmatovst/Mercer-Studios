@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const WhyChooseSection = () => {
   const { t } = useTranslation();
+      const { lng } = useParams();
+      const safeLng = lng || "en"; // ✅ fallback
 
   const benefitKeys = ["personalized", "proportion", "craft", "timeless", "seamless"];
 
@@ -20,7 +22,7 @@ const WhyChooseSection = () => {
               {t("whyChoose.title")}
             </h2>
             <Link
-              to="/start-project"
+              to={`/${safeLng}/start-project`}
               className="inline-block px-10 py-4 bg-charcoal text-cream text-sm tracking-widest uppercase hover:bg-charcoal-light transition-colors duration-300"
             >
               {t("whyChoose.cta")}
