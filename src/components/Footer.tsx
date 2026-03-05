@@ -1,17 +1,19 @@
 import { Instagram, Linkedin, Facebook } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Telegram } from "@/assets/Telegram";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
+  const { lng } = useParams(); // ✅ added lng
+  const safeLng = lng || "en"; // ✅ fallback
 
   const quickLinks = [
     { key: "about", href: "#about" },
     { key: "approach", href: "#approach" },
     { key: "services", href: "#services" },
-    { key: "projects", href: "/projects", isRoute: true },
+    { key: "projects", href: `${safeLng}/projects`, isRoute: true },
     { key: "contact", href: "#contact" },
   ];
 
