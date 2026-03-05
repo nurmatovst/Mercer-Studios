@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -66,8 +67,8 @@ const projectsData = [
     details: {
       area: "120 m²",
       duration: "3 weeks",
-      scope: ["Interior Design", "Custom Furniture", "Lighting Design"]
-    }
+      scope: ["Interior Design", "Custom Furniture", "Lighting Design"],
+    },
   },
   {
     id: "modern-heritage",
@@ -81,8 +82,8 @@ const projectsData = [
     details: {
       area: "80 m²",
       duration: "2 weeks",
-      scope: ["Kitchen Design", "Material Selection", "Space Planning"]
-    }
+      scope: ["Kitchen Design", "Material Selection", "Space Planning"],
+    },
   },
   {
     id: "artisan-living",
@@ -96,8 +97,8 @@ const projectsData = [
     details: {
       area: "65 m²",
       duration: "2 weeks",
-      scope: ["Living Space Design", "Art Curation", "Furniture Selection"]
-    }
+      scope: ["Living Space Design", "Art Curation", "Furniture Selection"],
+    },
   },
   {
     id: "spa-retreat",
@@ -111,8 +112,8 @@ const projectsData = [
     details: {
       area: "100 m²",
       duration: "2 weeks",
-      scope: ["Bathroom Design", "Material Selection", "Wellness Integration"]
-    }
+      scope: ["Bathroom Design", "Material Selection", "Wellness Integration"],
+    },
   },
   {
     id: "grand-atrium",
@@ -126,8 +127,8 @@ const projectsData = [
     details: {
       area: "5 m²",
       duration: "1 week",
-      scope: ["Hospitality Design", "Lighting Design", "Custom Installations"]
-    }
+      scope: ["Hospitality Design", "Lighting Design", "Custom Installations"],
+    },
   },
   {
     id: "executive-study",
@@ -141,8 +142,8 @@ const projectsData = [
     details: {
       area: "95 m²",
       duration: "2 weeks",
-      scope: ["Office Design", "Custom Millwork", "Acoustic Solutions"]
-    }
+      scope: ["Office Design", "Custom Millwork", "Acoustic Solutions"],
+    },
   },
   {
     id: "intimate-gathering",
@@ -156,8 +157,8 @@ const projectsData = [
     details: {
       area: "82 m²",
       duration: "2 weeks",
-      scope: ["Dining Room Design", "Furniture Design", "Lighting"]
-    }
+      scope: ["Dining Room Design", "Furniture Design", "Lighting"],
+    },
   },
   {
     id: "honey",
@@ -171,8 +172,8 @@ const projectsData = [
     details: {
       area: "20 m²",
       duration: "2 weeks",
-      scope: ["Honey Commercial Room Design", "Furniture Design", "Lighting"]
-    }
+      scope: ["Honey Commercial Room Design", "Furniture Design", "Lighting"],
+    },
   },
   {
     id: "kidsRoom",
@@ -186,8 +187,8 @@ const projectsData = [
     details: {
       area: "76 m²",
       duration: "2 weeks",
-      scope: ["Kids Room Design", "Furniture Design", "Lighting"]
-    }
+      scope: ["Kids Room Design", "Furniture Design", "Lighting"],
+    },
   },
   {
     id: "hallway",
@@ -201,27 +202,37 @@ const projectsData = [
     details: {
       area: "90 m²",
       duration: "2 weeks",
-      scope: ["Hallway Design", "Furniture Design", "Lighting"]
-    }
+      scope: ["Hallway Design", "Furniture Design", "Lighting"],
+    },
   },
 ];
 
 const ProjectDetail = () => {
-  const { projectId } = useParams();
+  const { projectId, lng } = useParams(); // ✅ added lng
   const { t } = useTranslation();
-  
-  const project = projectsData.find(p => p.id === projectId);
-  
+
+  const project = projectsData.find((p) => p.id === projectId);
+  const safeLng = lng || "en"; // ✅ fallback
+
   if (!project) {
-    return <Navigate to="/projects" replace />;
+    return <Navigate to={`/${safeLng}/projects`} replace />;
   }
 
-  const currentIndex = projectsData.findIndex(p => p.id === projectId);
+  const currentIndex = projectsData.findIndex((p) => p.id === projectId);
   const prevProject = currentIndex > 0 ? projectsData[currentIndex - 1] : null;
   const nextProject = currentIndex < projectsData.length - 1 ? projectsData[currentIndex + 1] : null;
 
   return (
     <main className="min-h-screen bg-background">
+      {/* ✅ SEO — uses project's own cover image and translated title/description */}
+      <SEO
+        lng={lng!}
+        title={t(project.titleKey)}
+        description={t(project.descriptionKey)}
+        path={`projects/${project.id}`}
+        ogImage={project.images[0]}
+      />
+
       <Navigation />
 
       {/* Hero Image */}
@@ -239,7 +250,7 @@ const ProjectDetail = () => {
       <section className="py-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <Link
-            to="/projects"
+            to={`/${safeLng}/projects`}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft size={16} />
@@ -293,31 +304,30 @@ const ProjectDetail = () => {
       </section>
 
       {/* Gallery */}
-<section className="pb-16 px-6 md:px-12 lg:px-24">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="font-serif text-2xl text-foreground mb-8">
-      {t("projectDetail.gallery")}
-    </h2>
-
-    {project.images.length > 1 ? (
-      <div className="grid md:grid-cols-2 gap-6">
-        {project.images.slice(1).map((image, index) => 
-          image ? (
-            <div key={index} className="aspect-[4/3] overflow-hidden">
-              <img
-                src={image}
-                alt={`${t(project.titleKey)} - ${index + 2}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
+      <section className="pb-16 px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-serif text-2xl text-foreground mb-8">
+            {t("projectDetail.gallery")}
+          </h2>
+          {project.images.length > 1 ? (
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.images.slice(1).map((image, index) =>
+                image ? (
+                  <div key={index} className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={image}
+                      alt={`${t(project.titleKey)} - ${index + 2}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                ) : null
+              )}
             </div>
-          ) : null
-        )}
-      </div>
-    ) : (
-      <p className="text-foreground">No additional images available</p>
-    )}
-  </div>
-</section>
+          ) : (
+            <p className="text-foreground">No additional images available</p>
+          )}
+        </div>
+      </section>
 
       {/* Navigation */}
       <section className="pb-24 px-6 md:px-12 lg:px-24">
@@ -325,7 +335,7 @@ const ProjectDetail = () => {
           <div className="flex justify-between items-center border-t border-border pt-8">
             {prevProject ? (
               <Link
-                to={`/projects/${prevProject.id}`}
+                to={`/${safeLng}/projects/${prevProject.id}`}
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft size={20} />
@@ -334,11 +344,12 @@ const ProjectDetail = () => {
                   <p className="font-serif text-lg">{t(prevProject.titleKey)}</p>
                 </div>
               </Link>
-            ) : <div />}
-            
+            ) : (
+              <div />
+            )}
             {nextProject ? (
               <Link
-                to={`/projects/${nextProject.id}`}
+                to={`/${safeLng}/projects/${nextProject.id}`}
                 className="flex items-center gap-3 text-right text-muted-foreground hover:text-foreground transition-colors"
               >
                 <div>
@@ -347,7 +358,9 @@ const ProjectDetail = () => {
                 </div>
                 <ArrowRight size={20} />
               </Link>
-            ) : <div />}
+            ) : (
+              <div />
+            )}
           </div>
         </div>
       </section>
@@ -362,7 +375,7 @@ const ProjectDetail = () => {
             {t("projectsPage.cta.description")}
           </p>
           <Link
-            to="/start-project"
+            to={`/${safeLng}/start-project`}
             className="inline-flex items-center gap-3 px-10 py-4 bg-charcoal text-cream text-sm tracking-widest uppercase hover:bg-charcoal-light transition-colors"
           >
             {t("projectsPage.cta.button")}

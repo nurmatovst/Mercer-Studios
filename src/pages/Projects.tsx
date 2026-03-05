@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import projectBedroom from "@/assets/bedroom/photo_2026-02-06_20-21-46.jpg";
@@ -112,6 +113,8 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const { t } = useTranslation();
+  const { lng } = useParams();
+  const safeLng = lng || "en"; // ✅ fallback
 
   const categories = [
     { key: "all", label: t("projectsPage.all") },
@@ -127,13 +130,21 @@ const Projects = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      {/* ✅ SEO added here */}
+      <SEO
+        lng={lng!}
+        title={t("seo.projects.title")}
+        description={t("seo.projects.description")}
+        path="projects"
+      />
+
       <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <Link
-            to="/"
+            to={`/${safeLng}`}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft size={16} />
@@ -179,7 +190,7 @@ const Projects = () => {
             {filteredProjects.map((project) => (
               <Link
                 key={project.id}
-                to={`/projects/${project.id}`}
+                to={`/${safeLng}/projects/${project.id}`}
                 className="group cursor-pointer block"
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
@@ -232,7 +243,7 @@ const Projects = () => {
             {t("projectsPage.cta.description")}
           </p>
           <Link
-            to="/start-project"
+            to={`/${safeLng}/start-project`}
             className="inline-flex items-center gap-3 px-10 py-4 bg-charcoal text-cream text-sm tracking-widest uppercase hover:bg-charcoal-light transition-colors"
           >
             {t("projectsPage.cta.button")}

@@ -1,22 +1,38 @@
+
+
+
+// ─────────────────────────────────────────────
+// Consultation.tsx
+// ─────────────────────────────────────────────
 import { useTranslation } from 'react-i18next';
 import { Calendar, MessageCircle, Phone, Mail, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useEffect } from "react";
 
 const Consultation = () => {
   const { t } = useTranslation();
+  const { lng } = useParams(); // ✅ added lng
 
   useEffect(() => {
-  const script = document.createElement("script");
-  script.src = "https://assets.calendly.com/assets/external/widget.js";
-  script.async = true;
-  document.body.appendChild(script);
-}, []);
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      {/* ✅ SEO added here — right after the opening <div> */}
+      <SEO
+        lng={lng!}
+        title={t("seo.consultation.title")}
+        description={t("seo.consultation.description")}
+        path="consultation"
+      />
+
       <Navigation />
       
       <main className="pt-32 pb-20">

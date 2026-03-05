@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -8,7 +8,10 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const { lng } = useParams(); // ✅ get current language from URL
+  const activeLng = lng || "en"; // ✅ fallback to "en" if not in a /:lng route
+
+  const isHomePage = location.pathname === `/${activeLng}` || location.pathname === "/";
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -19,43 +22,45 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ All routes now include the language prefix
   const navLinks = isHomePage
     ? [
-        { href: "#about", label: t("nav.about") },
-        { href: "#approach", label: t("nav.approach") },
-        { href: "#services", label: t("nav.services") },
-        { href: "/projects", label: t("nav.projects"), isRoute: true },
-        { href: "#contact", label: t("nav.contact") },
+        { href: `#about`, label: t("nav.about") },
+        { href: `#approach`, label: t("nav.approach") },
+        { href: `#services`, label: t("nav.services") },
+        { href: `/${activeLng}/projects`, label: t("nav.projects"), isRoute: true },
+        { href: `#contact`, label: t("nav.contact") },
       ]
     : [
-        { href: "/", label: t("nav.home"), isRoute: true },
-        { href: "/projects", label: t("nav.projects"), isRoute: true },
-        { href: "/start-project", label: t("nav.startProject"), isRoute: true },
+        { href: `/${activeLng}`, label: t("nav.home"), isRoute: true },
+        { href: `/${activeLng}/projects`, label: t("nav.projects"), isRoute: true },
+        { href: `/${activeLng}/start-project`, label: t("nav.startProject"), isRoute: true },
       ];
 
-  const navTextClass = isScrolled 
-    ? "text-muted-foreground hover:text-foreground" 
-    : isHomePage 
-      ? "text-cream/80 hover:text-cream" 
-      : "text-charcoal/70 hover:text-charcoal";
+  const navTextClass = isScrolled
+    ? "text-muted-foreground hover:text-foreground"
+    : isHomePage
+    ? "text-cream/80 hover:text-cream"
+    : "text-charcoal/70 hover:text-charcoal";
 
-  const logoTextClass = isScrolled 
-    ? "text-foreground" 
-    : isHomePage 
-      ? "text-cream/90" 
-      : "text-charcoal";
+  const logoTextClass = isScrolled
+    ? "text-foreground"
+    : isHomePage
+    ? "text-cream/90"
+    : "text-charcoal";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-6">
-        {/* Logo */}
-        <Link to="/" className={`font-serif text-xl md:text-2xl tracking-wide transition-colors duration-300 ${logoTextClass}`}>
+        {/* Logo — always goes to language home */}
+        <Link
+          to={`/${activeLng}`}
+          className={`font-serif text-xl md:text-2xl tracking-wide transition-colors duration-300 ${logoTextClass}`}
+        >
           Mercer <span className="text-gold">Studios</span>
         </Link>
 

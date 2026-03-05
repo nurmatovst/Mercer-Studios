@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, Calendar, DollarSign, Phone, Sparkles } from "lucide-react";
+import { Link, useParams } from "react-router-dom";
+import { ArrowLeft, ArrowRight, Check, Phone, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
 
 type Step = 1 | 2 | 3 | 4 | 5;
 
@@ -18,6 +20,8 @@ const colorPalettes = [
 ];
 
 const StartProject = () => {
+  const { lng } = useParams(); // ✅ added lng
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [formData, setFormData] = useState({
     projectType: "",
@@ -32,7 +36,6 @@ const StartProject = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { t } = useTranslation();
 
   const totalSteps = 5;
 
@@ -121,6 +124,14 @@ const StartProject = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      {/* ✅ SEO added here — right at the top inside <main> */}
+      <SEO
+        lng={lng!}
+        title={t("seo.startProject.title")}
+        description={t("seo.startProject.description")}
+        path="start-project"
+      />
+
       <Navigation />
 
       {/* Hero */}

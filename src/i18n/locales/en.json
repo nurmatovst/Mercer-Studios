@@ -105,11 +105,13 @@
       "title": "Honey",
       "description": "A warm and inviting space with natural textures and soft lighting.",
       "fullDescription": "This London residence features a cozy living area designed to feel like a warm embrace. Natural wood tones, soft textiles, and warm lighting create an atmosphere of comfort and tranquility. The design draws inspiration from the warmth of honey, bringing a sense of home and serenity to the space."
-    },"kidsRoom": {
+    },
+    "kidsRoom": {
       "title": "Kids Room",
       "description": "A playful and functional children's bedroom with natural materials.",
       "fullDescription": "This London kids' room combines playfulness with functionality. Natural wood elements, soft textures, and vibrant colors create a space that is both inviting and practical. The design encourages creativity while maintaining a sense of calm and comfort."
-    },"hallway": {
+    },
+    "hallway": {
       "title": "Hallway",
       "description": "A serene and welcoming hallway with natural materials and soft lighting.",
       "fullDescription": "This London hallway is designed to be a welcoming transition space. Natural wood tones, soft lighting, and carefully selected textures create an atmosphere of calm and comfort. The design emphasizes the importance of creating a positive first impression in any residential space."
@@ -307,5 +309,23 @@
       "title": "What to Expect",
       "description": "During your 30-minute consultation, we'll discuss your vision, answer any questions, and explore how we can bring your dream space to life. No obligations, just expert guidance."
     }
+  },
+  "seo": {
+  "home": {
+    "title": "Interior Design & Architecture Studio",
+    "description": "Mercer Studios creates functional and beautiful spaces — residential, commercial, and hospitality design in Tashkent."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "description": "Explore Mercer Studios' portfolio of interior and exterior design projects."
+  },
+  "startProject": {
+    "title": "Start a Project",
+    "description": "Tell us about your project and let's create something exceptional together."
+  },
+  "consultation": {
+    "title": "Book a Consultation",
+    "description": "Schedule a free consultation with our design team at Mercer Studios."
   }
+}
 }

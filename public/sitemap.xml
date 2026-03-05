@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/9/sitemap.xsd"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://mercerstudios.uz/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mercerstudios.uz/en"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://mercerstudios.uz/uz"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mercerstudios.uz/ru"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://mercerstudios.uz/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mercerstudios.uz/en/projects"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://mercerstudios.uz/uz/projects"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mercerstudios.uz/ru/projects"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
