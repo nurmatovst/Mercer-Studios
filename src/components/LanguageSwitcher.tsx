@@ -1,13 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Globe, ChevronDown } from "lucide-react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const languages = [
   { code: "en", label: "EN", fullLabel: "English" },
   { code: "ru", label: "RU", fullLabel: "Русский" },
   { code: "uz", label: "UZ", fullLabel: "O'zbek" },
 ];
+
+const VALID_LANGS = ["en", "uz", "ru"];
 
 interface LanguageSwitcherProps {
   textcolor?: string;
@@ -18,10 +20,14 @@ const LanguageSwitcher = ({ textcolor }: LanguageSwitcherProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const { lng } = useParams();
   const location = useLocation();
 
-  const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
+  // ✅ Extract language directly from URL — works on every page reliably
+  // /ru/projects → "ru" | /en → "en" | /uz/projects/hallway → "uz"
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const currentLngFromUrl = VALID_LANGS.includes(pathSegments[0]) ? pathSegments[0] : "en";
+
+  const currentLang = languages.find((l) => l.code === currentLngFromUrl) || languages[0];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -37,14 +43,10 @@ const LanguageSwitcher = ({ textcolor }: LanguageSwitcherProps) => {
     i18n.changeLanguage(code);
     setIsOpen(false);
 
-    // ✅ Replace the language prefix in the current URL
-    // e.g. /en/projects → /uz/projects, /en → /uz
-    if (lng) {
-      const newPath = location.pathname.replace(`/${lng}`, `/${code}`);
-      navigate(newPath);
-    } else {
-      navigate(`/${code}`);
-    }
+    // ✅ Swap only the lang prefix, keep full path intact
+    // /en/projects/hallway → /ru/projects/hallway
+    const newPath = location.pathname.replace(`/${currentLngFromUrl}`, `/${code}`);
+    navigate(newPath);
   };
 
   return (
@@ -65,7 +67,7 @@ const LanguageSwitcher = ({ textcolor }: LanguageSwitcherProps) => {
               key={lang.code}
               onClick={() => changeLanguage(lang.code)}
               className={`w-full px-4 py-2.5 text-left text-sm hover:bg-secondary transition-colors ${
-                lang.code === i18n.language ? "text-gold" : "text-foreground"
+                lang.code === currentLngFromUrl ? "text-gold" : "text-foreground"
               }`}
             >
               {lang.fullLabel}

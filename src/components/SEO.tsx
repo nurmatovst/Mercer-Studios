@@ -7,18 +7,14 @@ const LANGUAGES = ["en", "uz", "ru"] as const;
 type Lang = (typeof LANGUAGES)[number];
 
 interface SEOProps {
-  /** Current language from useParams() */
   lng: string;
-  /** Page title — do NOT include "| Mercer Studios", it's added automatically */
   title: string;
-  /** Page description (1–2 sentences, 120–160 chars) */
   description: string;
-  /** Path after the language prefix, e.g. "" for home, "projects" for /en/projects */
   path?: string;
-  /** Optional OG image — defaults to logo.jpg */
   ogImage?: string;
-  /** Set true on 404 / thank-you pages to prevent indexing */
   noIndex?: boolean;
+  /** Pass true only on the home page for richer business schema */
+  isHomePage?: boolean;
 }
 
 const SEO = ({
@@ -28,11 +24,58 @@ const SEO = ({
   path = "",
   ogImage = DEFAULT_IMAGE,
   noIndex = false,
+  isHomePage = false,
 }: SEOProps) => {
   const safeLng: Lang = LANGUAGES.includes(lng as Lang) ? (lng as Lang) : "en";
   const pagePath = path ? `/${path}` : "";
   const canonicalUrl = `${BASE_URL}/${safeLng}${pagePath}`;
   const fullTitle = `${title} | Mercer Studios`;
+
+  // ── JSON-LD: appears on every page ──
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "InteriorDesigner",
+    "name": "Mercer Studios",
+    "url": BASE_URL,
+    "logo": `${BASE_URL}/logo.jpg`,
+    "image": `${BASE_URL}/logo.jpg`,
+    "description": "Interior design and architecture studio creating functional and beautiful spaces in Tashkent, Uzbekistan.",
+    "telephone": "+998777532611",
+    "email": "hello@mercerstudios.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tashkent",
+      "addressCountry": "UZ"
+    },
+    "sameAs": [
+      "https://t.me/mercer_architects"
+    ],
+    "priceRange": "$$$$",
+    "areaServed": ["Uzbekistan", "Kazakhstan"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Interior Design Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Interior Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Architecture & Space Planning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D Rendering & Visualisation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bespoke Furniture & Feature Design" } }
+      ]
+    }
+  };
+
+  // ── JSON-LD: only on home page ──
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mercer Studios",
+    "url": BASE_URL,
+    "inLanguage": ["en", "uz", "ru"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${BASE_URL}/en/projects`
+    }
+  };
 
   return (
     <Helmet>
@@ -45,7 +88,7 @@ const SEO = ({
       {/* ── Canonical ── */}
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* ── hreflang (all pages must declare all languages) ── */}
+      {/* ── hreflang ── */}
       {LANGUAGES.map((l) => (
         <link
           key={l}
@@ -54,11 +97,7 @@ const SEO = ({
           href={`${BASE_URL}/${l}${pagePath}`}
         />
       ))}
-      <link
-        rel="alternate"
-        hrefLang="x-default"
-        href={`${BASE_URL}/en${pagePath}`}
-      />
+      <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/en${pagePath}`} />
 
       {/* ── Open Graph ── */}
       <meta property="og:title" content={fullTitle} />
@@ -75,6 +114,18 @@ const SEO = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+
+      {/* ── JSON-LD: Organization (every page) ── */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+
+      {/* ── JSON-LD: WebSite (home page only) ── */}
+      {isHomePage && (
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+      )}
     </Helmet>
   );
 };

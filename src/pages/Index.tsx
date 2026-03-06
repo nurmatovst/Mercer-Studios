@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
@@ -13,16 +14,23 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const { lng } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // ✅ Sync i18n language with the URL — but don't fight the language switcher
+  useEffect(() => {
+    if (lng && i18n.language !== lng) {
+      i18n.changeLanguage(lng);
+    }
+  }, [lng]); // only re-run when URL lang changes, not on every i18n update
 
   return (
     <>
-      {/* ✅ SEO — replaces the old <Helmet> block */}
       <SEO
         lng={lng!}
         title={t("seo.home.title")}
         description={t("seo.home.description")}
         path=""
+        isHomePage={true} // ✅ enables extra JSON-LD WebSite schema
       />
 
       <main className="overflow-hidden">
