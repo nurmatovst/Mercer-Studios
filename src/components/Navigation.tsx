@@ -1,18 +1,23 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+
+const VALID_LANGS = ["en", "uz", "ru"];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { lng } = useParams(); // ✅ get current language from URL
-  const activeLng = lng || "en"; // ✅ fallback to "en" if not in a /:lng route
-
-  const isHomePage = location.pathname === `/${activeLng}` || location.pathname === "/";
   const { t } = useTranslation();
+
+  // ✅ Extract lang from URL directly — same approach as LanguageSwitcher
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const activeLng = VALID_LANGS.includes(pathSegments[0]) ? pathSegments[0] : "en";
+
+  // ✅ Home page = /en or /uz or /ru (no further segments)
+  const isHomePage = pathSegments.length === 1 && VALID_LANGS.includes(pathSegments[0]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,14 +27,18 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ All routes now include the language prefix
+  // ✅ Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const navLinks = isHomePage
     ? [
-        { href: `#about`, label: t("nav.about") },
-        { href: `#approach`, label: t("nav.approach") },
-        { href: `#services`, label: t("nav.services") },
+        { href: "#about", label: t("nav.about") },
+        { href: "#approach", label: t("nav.approach") },
+        { href: "#services", label: t("nav.services") },
         { href: `/${activeLng}/projects`, label: t("nav.projects"), isRoute: true },
-        { href: `#contact`, label: t("nav.contact") },
+        { href: "#contact", label: t("nav.contact") },
       ]
     : [
         { href: `/${activeLng}`, label: t("nav.home"), isRoute: true },
@@ -37,6 +46,7 @@ const Navigation = () => {
         { href: `/${activeLng}/start-project`, label: t("nav.startProject"), isRoute: true },
       ];
 
+  // ✅ Stable color classes — won't flicker on language switch
   const navTextClass = isScrolled
     ? "text-muted-foreground hover:text-foreground"
     : isHomePage
@@ -56,7 +66,7 @@ const Navigation = () => {
       }`}
     >
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-6">
-        {/* Logo — always goes to language home */}
+        {/* Logo */}
         <Link
           to={`/${activeLng}`}
           className={`font-serif text-xl md:text-2xl tracking-wide transition-colors duration-300 ${logoTextClass}`}
@@ -92,7 +102,7 @@ const Navigation = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher textcolor={navTextClass} />
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-foreground p-2"
