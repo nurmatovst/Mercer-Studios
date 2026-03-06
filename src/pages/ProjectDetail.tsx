@@ -239,6 +239,7 @@ const ProjectDetail = () => {
       <section className="pt-24">
         <div className="aspect-[21/9] w-full overflow-hidden">
           <img
+          loading="lazy"
             src={project.images[0]}
             alt={t(project.titleKey)}
             className="w-full h-full object-cover"
@@ -316,6 +317,7 @@ const ProjectDetail = () => {
                   <div key={index} className="aspect-[4/3] overflow-hidden">
                     <img
                       src={image}
+                      loading="lazy"
                       alt={`${t(project.titleKey)} - ${index + 2}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />

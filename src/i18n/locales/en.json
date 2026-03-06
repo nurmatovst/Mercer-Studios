@@ -69,17 +69,17 @@
     "sereneSanctuary": {
       "title": "Serene Sanctuary",
       "description": "A tranquil bedroom retreat with natural light and organic textures.",
-      "fullDescription": "This London residence transforms the master suite into a peaceful sanctuary. We carefully curated natural materials—linen, oak, and stone—to create a space that breathes tranquility. The design emphasizes the connection between indoor and outdoor spaces, with floor-to-ceiling windows flooding the room with soft, natural light throughout the day."
+      "fullDescription": "This Tashkent residence transforms the master suite into a peaceful sanctuary. We carefully curated natural materials—linen, oak, and stone—to create a space that breathes tranquility. The design emphasizes the connection between indoor and outdoor spaces, with floor-to-ceiling windows flooding the room with soft, natural light throughout the day."
     },
     "modernHeritage": {
       "title": "Modern Heritage",
       "description": "Contemporary kitchen blending marble elegance with warm wood tones.",
-      "fullDescription": "In the heart of Paris, we crafted a kitchen that honors the building's heritage while embracing contemporary living. Calacatta marble surfaces meet warm walnut cabinetry, creating a dialogue between old and new. Every detail, from the custom bronze hardware to the integrated lighting, was designed to elevate daily rituals."
+      "fullDescription": "In the heart of Tashkent, we crafted a kitchen that honors the building's heritage while embracing contemporary living. Calacatta marble surfaces meet warm walnut cabinetry, creating a dialogue between old and new. Every detail, from the custom bronze hardware to the integrated lighting, was designed to elevate daily rituals."
     },
     "artisanLiving": {
       "title": "Artisan Living",
       "description": "A curated living space celebrating art and sculptural furniture.",
-      "fullDescription": "This Milanese apartment celebrates the art of living well. We designed the space as a gallery for the client's collection, with bespoke furniture pieces that serve as functional sculptures. The neutral palette allows the artwork to take center stage while maintaining warmth and intimacy."
+      "fullDescription": "This Tashkent apartment celebrates the art of living well. We designed the space as a gallery for the client's collection, with bespoke furniture pieces that serve as functional sculptures. The neutral palette allows the artwork to take center stage while maintaining warmth and intimacy."
     },
     "spaRetreat": {
       "title": "Spa Retreat",
@@ -87,34 +87,34 @@
       "fullDescription": "Inspired by Swiss alpine wellness traditions, this bathroom becomes a daily spa experience. Natural travertine, heated floors, and integrated steam features create a space for restoration. The minimalist design focuses on sensory experiences—the texture of stone, the warmth of water, the quality of light."
     },
     "grandAtrium": {
-      "title": "Grand Atrium",
-      "description": "A luxurious hotel lobby featuring sculptural lighting and marble.",
-      "fullDescription": "This Dubai hotel lobby makes a statement without overwhelming. The triple-height atrium features a custom sculptural chandelier that cascades like falling water. Italian marble floors reflect the ambient light, while intimate seating areas invite guests to pause and appreciate the architecture."
-    },
+  "title": "Atrium Retail Stall",
+  "description": "A modern and compact retail stall designed for a shopping mall.",
+  "fullDescription": "This project is a retail stall designed for placement inside a shopping mall. The concept focuses on an open and eye-catching layout that naturally attracts passing visitors. Integrated lighting and contemporary materials highlight the displayed products, while the compact design ensures efficient use of the limited space."
+},
     "executiveStudy": {
       "title": "Executive Study",
       "description": "A sophisticated home office with custom millwork and warm ambiance.",
-      "fullDescription": "For a Manhattan executive, we designed a home office that balances professionalism with personal comfort. Floor-to-ceiling walnut millwork houses an extensive library while concealing modern technology. The space respects the building's Art Deco heritage while serving contemporary work patterns."
+      "fullDescription": "For an executive, we designed a home office that balances professionalism with personal comfort. Floor-to-ceiling walnut millwork houses an extensive library while concealing modern technology. The space respects the building's Art Deco heritage while serving contemporary work patterns."
     },
     "intimateGathering": {
       "title": "Intimate Gathering",
       "description": "A minimalist dining space designed for meaningful conversations.",
-      "fullDescription": "This Copenhagen dining room embodies Nordic design philosophy—every element serves a purpose, and beauty emerges from simplicity. The custom oak table seats ten comfortably, while pendant lighting creates an intimate atmosphere. The space seamlessly connects to the kitchen, facilitating the Danish tradition of hygge."
+      "fullDescription": "This Tashkent dining room embodies Nordic design philosophy—every element serves a purpose, and beauty emerges from simplicity. The custom oak table seats ten comfortably, while pendant lighting creates an intimate atmosphere. The space seamlessly connects to the kitchen, facilitating the Danish tradition of hygge."
     },
     "honey": {
       "title": "Honey",
       "description": "A warm and inviting space with natural textures and soft lighting.",
-      "fullDescription": "This London residence features a cozy living area designed to feel like a warm embrace. Natural wood tones, soft textiles, and warm lighting create an atmosphere of comfort and tranquility. The design draws inspiration from the warmth of honey, bringing a sense of home and serenity to the space."
+      "fullDescription": "This Tashkent residence features a cozy living area designed to feel like a warm embrace. Natural wood tones, soft textiles, and warm lighting create an atmosphere of comfort and tranquility. The design draws inspiration from the warmth of honey, bringing a sense of home and serenity to the space."
     },
     "kidsRoom": {
       "title": "Kids Room",
       "description": "A playful and functional children's bedroom with natural materials.",
-      "fullDescription": "This London kids' room combines playfulness with functionality. Natural wood elements, soft textures, and vibrant colors create a space that is both inviting and practical. The design encourages creativity while maintaining a sense of calm and comfort."
+      "fullDescription": "This Tashkent kids' room combines playfulness with functionality. Natural wood elements, soft textures, and vibrant colors create a space that is both inviting and practical. The design encourages creativity while maintaining a sense of calm and comfort."
     },
     "hallway": {
       "title": "Hallway",
       "description": "A serene and welcoming hallway with natural materials and soft lighting.",
-      "fullDescription": "This London hallway is designed to be a welcoming transition space. Natural wood tones, soft lighting, and carefully selected textures create an atmosphere of calm and comfort. The design emphasizes the importance of creating a positive first impression in any residential space."
+      "fullDescription": "This Tashkent hallway is designed to be a welcoming transition space. Natural wood tones, soft lighting, and carefully selected textures create an atmosphere of calm and comfort. The design emphasizes the importance of creating a positive first impression in any residential space."
     }
   },
   "projectDetail": {

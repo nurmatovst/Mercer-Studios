@@ -57,6 +57,7 @@ const ProjectsSection = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={project.image}
+                  loading="lazy"
                   alt={t(project.titleKey)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

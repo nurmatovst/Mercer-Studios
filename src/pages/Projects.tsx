@@ -199,6 +199,7 @@ const Projects = () => {
                   <div className="aspect-[4/5]">
                     <img
                       src={project.image}
+                      loading="lazy"
                       alt={t(project.titleKey)}
                       className={`w-full h-full object-cover transition-transform duration-700 ${
                         hoveredProject === project.id ? "scale-105" : "scale-100"

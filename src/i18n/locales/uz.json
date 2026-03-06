@@ -69,52 +69,52 @@
     "sereneSanctuary": {
       "title": "Sakin Muqaddas Joy",
       "description": "Tabiiy yorug'lik va organik to'qimalar bilan tinch yotoqxona.",
-      "fullDescription": "Bu London uyi bosh yotoqxonani tinch muqaddas joyga aylantiradi. Keten, eman va tosh kabi tabiiy materiallarni diqqat bilan tanlab, nafas oladigan tinchlik makoni yaratdik. Dizayn ichki va tashqi makonlar o'rtasidagi aloqani ta'kidlab, devordan devorga oynalar orqali xonani kun bo'yi yumshoq, tabiiy yorug'lik bilan to'ldiradi."
+      "fullDescription": "Bu Toshkentdagi uy bosh yotoqxonani tinch joyga aylantiradi. Keten, eman va tosh kabi tabiiy materiallarni diqqat bilan tanlab, nafas oladigan tinchlik makoni yaratdik. Dizayn ichki va tashqi makonlar o'rtasidagi aloqani ta'kidlab, devordan devorga oynalar orqali xonani kun bo'yi yumshoq, tabiiy yorug'lik bilan to'ldiradi."
     },
     "modernHeritage": {
       "title": "Zamonaviy Meros",
       "description": "Marmar nafosatini iliq yog'och tonlari bilan birlashtirgan zamonaviy oshxona.",
-      "fullDescription": "Parij qalbida bino merosini hurmat qiluvchi va zamonaviy yashashni qabul qiluvchi oshxona yaratdik. Kalakatta marmar yuzalari iliq yong'oq shkafchalari bilan uchrashib, eski va yangi o'rtasida muloqot yaratadi. Har bir tafsilot, maxsus bronza armaturadan tortib integral yoritishgacha, kundalik marosimlarni yuksaklikka ko'tarish uchun mo'ljallangan."
+      "fullDescription": "Toshkent qalbida bino merosini hurmat qiluvchi va zamonaviy yashashni qabul qiluvchi oshxona yaratdik. Kalakatta marmar yuzalari iliq yong'oq shkafchalari bilan uchrashib, eski va yangi o'rtasida muloqot yaratadi. Har bir tafsilot, maxsus bronza armaturadan tortib integral yoritishgacha, kundalik marosimlarni yuksaklikka ko'tarish uchun mo'ljallangan."
     },
     "artisanLiving": {
       "title": "Usta Yashashi",
       "description": "San'at va haykaltarosh mebelni nishonlaydigan saylanma yashash makoni.",
-      "fullDescription": "Bu Milan kvartirasi yaxshi yashash san'atini nishonlaydi. Makonni mijozning kolleksiyasi uchun galereya sifatida loyihaladik, funksional haykaltarosh sifatida xizmat qiladigan maxsus mebel buyumlari bilan. Neytral palitra iliqlik va intimitlikni saqlab, san'at asarlari asosiy o'rin egallashiga imkon beradi."
+      "fullDescription": "Bu Toshkent kvartirasi qulaylik timsoli. Makonni mijozning kolleksiyasi uchun galereya sifatida loyihaladik, funksional haykaltarosh sifatida xizmat qiladigan maxsus mebel buyumlari bilan. Neytral palitra iliqlik va intimitlikni saqlab, san'at asarlari asosiy o'rin egallashiga imkon beradi."
     },
     "spaRetreat": {
-      "title": "Spa Dam Olish",
-      "description": "Tabiiy tosh va sakin atmosfera bilan spa ilhomli hammom.",
+      "title": "SPA Dam Olish",
+      "description": "Tabiiy tosh va sakin atmosfera bilan SPA.",
       "fullDescription": "Shveytsariyaning alp sog'liqni saqlash an'analaridan ilhomlanib, bu hammom kundalik spa tajribasiga aylanadi. Tabiiy travertin, isitilgan pollar va integral bug' xususiyatlari tiklanish makoni yaratadi. Minimalist dizayn hissiy tajribalarga — toshning to'qimasiga, suvning iliqligiga, yorug'lik sifatiga e'tibor qaratadi."
     },
     "grandAtrium": {
-      "title": "Ulug'vor Atrium",
-      "description": "Haykaltarosh yoritish va marmar bilan hashamatli mehmonxona lobbisi.",
-      "fullDescription": "Bu Dubay mehmonxonasi lobbisi haddan oshmasdan bayonot beradi. Uch balandlikdagi atrium tushayotgan suv kabi oqadigan maxsus haykaltarosh lyustr bilan bezatilgan. Italyan marmar pollari atrof muhit yorug'ligini aks ettiradi, qulay o'tirish joylari esa mehmonlarni to'xtab, me'morchilikni qadrlamaklariga taklif qiladi."
-    },
+  "title": "Atrium savdo stendi",
+  "description": "Savdo markazida joylashgan zamonaviy va ixcham savdo stendi dizayni.",
+  "fullDescription": "Ushbu loyiha savdo markazi ichida joylashgan kichik savdo stendi uchun yaratilgan. Dizayn ochiq va e'tiborni tortuvchi shaklda ishlab chiqilgan bo‘lib, mijozlarni yaqinlashishga undaydi. Yorug‘lik elementlari va zamonaviy materiallar mahsulotlarni yanada ajratib ko‘rsatadi, ixcham rejalashtirish esa kichik maydondan maksimal darajada foydalanishga yordam beradi."
+},
     "executiveStudy": {
       "title": "Ijrochi Kabineti",
       "description": "Maxsus duradgorlik va iliq muhit bilan nozik uy ofisi.",
-      "fullDescription": "Manhattan ijrochisi uchun professionallik va shaxsiy qulaylikni muvozanatlashtiradigan uy ofisi loyihaladik. Devordan devorga yong'oq duradgorligi katta kutubxonani joylashtiradi va zamonaviy texnologiyalarni yashiradi. Makon binoning Art Deco merosini hurmat qiladi va zamonaviy ish tartiblariga xizmat qiladi."
+      "fullDescription": "Ijrochi uchun professionallik va shaxsiy qulaylikni muvozanatlashtiradigan uy ofisi loyihaladik. Devordan devorga yong'oq duradgorligi katta kutubxonani joylashtiradi va zamonaviy texnologiyalarni yashiradi. Makon binoning Art Deco merosini hurmat qiladi va zamonaviy ish tartiblariga xizmat qiladi."
     },
     "intimateGathering": {
       "title": "Intim Yig'ilish",
       "description": "Mazmunli suhbatlar uchun mo'ljallangan minimalist ovqatlanish makoni.",
-      "fullDescription": "Bu Kopengagen ovqatlanish xonasi Skandinaviya dizayn falsafasini gavdalantiradi — har bir element maqsadga xizmat qiladi va go'zallik soddalikdan kelib chiqadi. Maxsus eman stoli o'nta kishini qulay joylashtiradi, osilib turuvchi yoritish esa intim muhit yaratadi. Makon oshxonaga uzluksiz ulanib, Danish hygge an'anasini osonlashtiradi."
+      "fullDescription": "Bu Toshkentdagi oshxona Skandinaviya dizayn falsafasini gavdalantiradi — har bir element maqsadga xizmat qiladi va go'zallik soddalikdan kelib chiqadi. Maxsus eman stoli o'nta kishini qulay joylashtiradi, osilib turuvchi yoritish esa intim muhit yaratadi. Makon oshxonaga uzluksiz ulanib, Danish hygge an'anasini osonlashtiradi."
     },
     "honey": {
       "title": "Asal",
       "description": "Tabiiy to'qimalar va yumshoq yoritish bilan iliq va qulay makon.",
-      "fullDescription": "Bu London uyi iliq quchoqday his qildiradigan qulay yashash maydonini o'z ichiga oladi. Tabiiy yog'och tonlari, yumshoq to'qimalar va iliq yoritish qulaylik va tinchlik atmosferasini yaratadi. Dizayn asal iliqligidan ilhom olib, makonga uyning iliqligini va sokinligini olib kiradi."
+      "fullDescription": "Bu Toshkent uyi iliq quchoqday his qildiradigan qulay yashash maydonini o'z ichiga oladi. Tabiiy yog'och tonlari, yumshoq to'qimalar va iliq yoritish qulaylik va tinchlik atmosferasini yaratadi. Dizayn asal iliqligidan ilhom olib, makonga uyning iliqligini va sokinligini olib kiradi."
     },
     "kidsRoom": {
       "title": "Bolalar Xonasi",
       "description": "Tabiiy materiallar bilan o'ynoqi va funksional bolalar yotoqxonasi.",
-      "fullDescription": "Bu London bolalar xonasi o'ynoqilikni funksionallik bilan birlashtiradi. Tabiiy yog'och elementlari, yumshoq to'qimalar va yorqin ranglar ham taklif qiluvchi, ham amaliy bo'lgan makon yaratadi. Dizayn ijodkorlikni rag'batlantiradi va tinchlik va qulaylik hissini saqlab qoladi."
+      "fullDescription": "Bu Toshkent bolalar xonasi o'ynoqilikni funksionallik bilan birlashtiradi. Tabiiy yog'och elementlari, yumshoq to'qimalar va yorqin ranglar ham taklif qiluvchi, ham amaliy bo'lgan makon yaratadi. Dizayn ijodkorlikni rag'batlantiradi va tinchlik va qulaylik hissini saqlab qoladi."
     },
     "hallway": {
       "title": "Yo'lak",
       "description": "Tabiiy materiallar va yumshoq yoritish bilan sakin va xush kelibsiz yo'lak.",
-      "fullDescription": "Bu London yo'lagi xush kelibsiz o'tish makoni bo'lish uchun mo'ljallangan. Tabiiy yog'och tonlari, yumshoq yoritish va diqqat bilan tanlangan to'qimalar tinchlik va qulaylik atmosferasini yaratadi. Dizayn har qanday turar-joy makonida ijobiy birinchi taassurot yaratishning muhimligini ta'kidlaydi."
+      "fullDescription": "Bu Toshkent yo'lagi xush kelibsiz o'tish makoni bo'lish uchun mo'ljallangan. Tabiiy yog'och tonlari, yumshoq yoritish va diqqat bilan tanlangan to'qimalar tinchlik va qulaylik atmosferasini yaratadi. Dizayn har qanday turar-joy makonida ijobiy birinchi taassurot yaratishning muhimligini ta'kidlaydi."
     }
   },
   "projectDetail": {
