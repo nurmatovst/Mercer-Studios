@@ -162,21 +162,7 @@ const projectsData = [
       scope: ["Dining Room Design", "Furniture Design", "Lighting"],
     },
   },
-  {
-    id: "honey",
-    titleKey: "projects.honey.title",
-    categoryKey: "residential",
-    location: "Tashkent, Uzbekistan",
-    year: "2023",
-    descriptionKey: "projects.honey.description",
-    fullDescriptionKey: "projects.honey.fullDescription",
-    images: [projectHoney, projectHoney2],
-    details: {
-      area: "20 m²",
-      duration: "2 weeks",
-      scope: ["Honey Commercial Room Design", "Furniture Design", "Lighting"],
-    },
-  },
+  
   {
     id: "kidsRoom",
     titleKey: "projects.kidsRoom.title",
@@ -192,6 +178,7 @@ const projectsData = [
       scope: ["Kids Room Design", "Furniture Design", "Lighting"],
     },
   },
+  
   {
     id: "hallway",
     titleKey: "projects.hallway.title",
@@ -205,6 +192,21 @@ const projectsData = [
       area: "90 m²",
       duration: "2 weeks",
       scope: ["Hallway Design", "Furniture Design", "Lighting"],
+    },
+  },
+  {
+    id: "honey",
+    titleKey: "projects.honey.title",
+    categoryKey: "residential",
+    location: "Tashkent, Uzbekistan",
+    year: "2023",
+    descriptionKey: "projects.honey.description",
+    fullDescriptionKey: "projects.honey.fullDescription",
+    images: [projectHoney, projectHoney2],
+    details: {
+      area: "20 m²",
+      duration: "2 weeks",
+      scope: ["Honey Commercial Room Design", "Furniture Design", "Lighting"],
     },
   },
 ];
