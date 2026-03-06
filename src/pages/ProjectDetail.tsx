@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useLng } from "@/hooks/useLng";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -53,6 +54,7 @@ import projectHallWay6 from "@/assets/hallway/photo_2026-02-06_20-20-27.jpg";
 import projectHallWay7 from "@/assets/hallway/photo_2026-02-06_20-20-30.jpg";
 import projectHallWay8 from "@/assets/hallway/photo_2026-02-06_20-20-32.jpg";
 import projectHallWay9 from "@/assets/hallway/photo_2026-02-06_20-20-34.jpg";
+
 
 const projectsData = [
   {
@@ -208,7 +210,8 @@ const projectsData = [
 ];
 
 const ProjectDetail = () => {
-  const { projectId, lng } = useParams(); // ✅ added lng
+  const { projectId } = useParams(); // ✅ added lng
+  const lng = useLng();
   const { t } = useTranslation();
 
   const project = projectsData.find((p) => p.id === projectId);

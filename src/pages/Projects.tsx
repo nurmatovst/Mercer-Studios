@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
@@ -15,6 +15,7 @@ import projectDining from "@/assets/project-dining.jpg";
 import projectKids from "@/assets/kidsroom/photo_2026-02-06_20-21-36.jpg";
 import projectHallway from "@/assets/hallway/photo_2026-02-06_20-20-02.jpg";
 import projectHoney from "@/assets/honey/photo_2026-02-06_20-21-11.jpg";
+import { useLng } from "@/hooks/useLng";
 
 const projects = [
   {
@@ -113,7 +114,7 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const { t } = useTranslation();
-  const { lng } = useParams();
+  const lng = useLng();
   const safeLng = lng || "en"; // ✅ fallback
 
   const categories = [
