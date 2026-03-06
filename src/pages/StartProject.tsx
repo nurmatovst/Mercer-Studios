@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useLng } from "@/hooks/useLng";
 
 
 type Step = 1 | 2 | 3 | 4 | 5;
@@ -20,7 +21,7 @@ const colorPalettes = [
 ];
 
 const StartProject = () => {
-  const { lng } = useParams(); // ✅ added lng
+  const lng = useLng();
   const safeLng = lng || "en"; // ✅ fallback
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState<Step>(1);

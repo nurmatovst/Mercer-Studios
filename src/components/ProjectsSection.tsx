@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import projectBedroom from "@/assets/bedroom/photo_2026-02-06_20-21-46.jpg";
 import projectKitchen from "@/assets/project-kitchen.jpg";
 import projectLiving from "@/assets/livingroom/photo_2026-02-06_20-18-35.jpg";
+import { useLng } from "@/hooks/useLng";
 
 const projects = [
   {
@@ -27,8 +28,7 @@ const projects = [
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
-    const { lng } = useParams();
-    const safeLng = lng || "en"; // ✅ fallback
+    const safeLng = useLng();
 
   return (
     <section id="projects" className="section-padding bg-charcoal">

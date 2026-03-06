@@ -6,15 +6,16 @@
 // ─────────────────────────────────────────────
 import { useTranslation } from 'react-i18next';
 import { Calendar, MessageCircle, Phone, Mail, ArrowLeft } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useEffect } from "react";
+import { useLng } from '@/hooks/useLng';
 
 const Consultation = () => {
   const { t } = useTranslation();
-  const { lng } = useParams(); // ✅ added lng
+const lng = useLng();
     const safeLng = lng || "en"; // ✅ fallback
 
   useEffect(() => {

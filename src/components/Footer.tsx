@@ -2,12 +2,13 @@ import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Telegram } from "@/assets/Telegram";
+import { useLng } from "@/hooks/useLng";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
-  const { lng } = useParams(); // ✅ added lng
-  const safeLng = lng || "en"; // ✅ fallback
+  const safeLng = useLng(); // ✅ use the custom hook
 
   const quickLinks = [
     { key: "about", href: "#about" },

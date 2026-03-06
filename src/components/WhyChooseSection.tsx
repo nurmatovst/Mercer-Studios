@@ -1,11 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useLng } from "@/hooks/useLng";
 
 const WhyChooseSection = () => {
   const { t } = useTranslation();
-      const { lng } = useParams();
-      const safeLng = lng || "en"; // ✅ fallback
+const safeLng = useLng();
 
   const benefitKeys = ["personalized", "proportion", "craft", "timeless", "seamless"];
 

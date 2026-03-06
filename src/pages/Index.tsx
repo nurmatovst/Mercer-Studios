@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLng } from "@/hooks/useLng";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
@@ -13,7 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const { lng } = useParams();
+const lng = useLng();
   const { t, i18n } = useTranslation();
 
   // ✅ Sync i18n language with the URL — but don't fight the language switcher

@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useLng } from "@/hooks/useLng";
 
-const VALID_LANGS = ["en", "uz", "ru"];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,11 +13,10 @@ const Navigation = () => {
   const { t } = useTranslation();
 
   // ✅ Extract lang from URL directly — same approach as LanguageSwitcher
-  const pathSegments = location.pathname.split("/").filter(Boolean);
-  const activeLng = VALID_LANGS.includes(pathSegments[0]) ? pathSegments[0] : "en";
+  const activeLng = useLng();
 
   // ✅ Home page = /en or /uz or /ru (no further segments)
-  const isHomePage = pathSegments.length === 1 && VALID_LANGS.includes(pathSegments[0]);
+  const isHomePage = location.pathname === `/${activeLng}`;
 
   useEffect(() => {
     const handleScroll = () => {
