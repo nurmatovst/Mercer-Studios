@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          loading="lazy"
+          fetchPriority="high"
           alt="Luxury interior design living room"
           className="w-full h-full object-cover"
         />

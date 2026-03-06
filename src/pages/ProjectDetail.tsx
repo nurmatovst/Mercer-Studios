@@ -247,6 +247,8 @@ const ProjectDetail = () => {
           loading="lazy"
             src={project.images[0]}
             alt={t(project.titleKey)}
+            width={1920}
+  height={820}
             className="w-full h-full object-cover"
           />
         </div>

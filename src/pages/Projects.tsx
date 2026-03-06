@@ -202,6 +202,8 @@ const Projects = () => {
                       src={project.image}
                       loading="lazy"
                       alt={t(project.titleKey)}
+                      width={800}
+  height={1000}
                       className={`w-full h-full object-cover transition-transform duration-700 ${
                         hoveredProject === project.id ? "scale-105" : "scale-100"
                       }`}
