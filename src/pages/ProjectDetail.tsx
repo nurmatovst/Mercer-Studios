@@ -168,7 +168,7 @@ const projectsData = [
     titleKey: "projects.kidsRoom.title",
     categoryKey: "residential",
     location: "Tashkent, Uzbekistan",
-    year: "2023",
+    year: "2025",
     descriptionKey: "projects.kidsRoom.description",
     fullDescriptionKey: "projects.kidsRoom.fullDescription",
     images: [projectKidsRoom, projectKidsRoom2, projectKidsRoom3, projectKidsRoom4],

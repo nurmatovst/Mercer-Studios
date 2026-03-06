@@ -82,7 +82,7 @@ const projects = [
     descriptionKey: "projects.intimateGathering.description",
   },
   {
-    id: "kidsroom",
+    id: "kidsRoom",
     image: projectKids,
     titleKey: "projects.kidsRoom.title",
     categoryKey: "residential",
