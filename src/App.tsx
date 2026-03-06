@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Index = lazy(() => import("./pages/Index"));
 const Projects = lazy(() => import("./pages/Projects"));
@@ -24,6 +25,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <Analytics />
+        <SpeedInsights />
         <BrowserRouter>
           <ScrollToTop />
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
