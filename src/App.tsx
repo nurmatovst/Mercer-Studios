@@ -8,6 +8,7 @@ import { lazy, Suspense } from "react";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import LanguageRedirect from "./components/LanguageRedirect";
 
 const Index = lazy(() => import("./pages/Index"));
 const Projects = lazy(() => import("./pages/Projects"));
@@ -31,7 +32,7 @@ const App = () => (
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>
               {/* Redirect root to /en */}
-              <Route path="/" element={<Navigate to="/en" replace />} />
+             <Route path="/" element={<LanguageRedirect />} />
 
               {/* ✅ Only match exact valid language codes */}
               <Route path="/en">

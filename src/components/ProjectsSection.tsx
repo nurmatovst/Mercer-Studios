@@ -1,34 +1,15 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import projectBedroom from "@/assets/bedroom/photo_2026-02-06_20-21-46.jpg";
-import projectKitchen from "@/assets/project-kitchen.jpg";
-import projectLiving from "@/assets/livingroom/photo_2026-02-06_20-18-35.jpg";
 import { useLng } from "@/hooks/useLng";
-
-const projects = [
-  {
-    image: projectBedroom,
-    titleKey: "projects.sereneSanctuary.title",
-    categoryKey: "projectsPage.residential",
-    location: "Tashkent, Uzbekistan",
-  },
-  {
-    image: projectKitchen,
-    titleKey: "projects.modernHeritage.title",
-    categoryKey: "projectsPage.residential",
-    location: "Almaty, Kazakhstan",
-  },
-  {
-    image: projectLiving,
-    titleKey: "projects.artisanLiving.title",
-    categoryKey: "projectsPage.residential",
-    location: "Keles, Uzbekistan",
-  },
-];
+import { projectsData } from "@/data/projects"; // ✅ single source of truth
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
-    const safeLng = useLng();
+  const lng = useLng();
+
+  // ✅ Always shows the 3 most recent projects (first 3 in the array)
+  // To change which projects appear here, just reorder them in projects.ts
+  const featuredProjects = projectsData.slice(0, 3);
 
   return (
     <section id="projects" className="section-padding bg-charcoal">
@@ -48,15 +29,15 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <Link
-              key={project.titleKey}
-              to={`/${safeLng}/projects`}
+              key={project.id}
+              to={`/${lng}/projects/${project.id}`} // ✅ links directly to project detail
               className="group relative overflow-hidden cursor-pointer block"
             >
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src={project.image}
+                  src={project.coverImage}
                   loading="lazy"
                   alt={t(project.titleKey)}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -66,7 +47,7 @@ const ProjectsSection = () => {
               <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/60 transition-all duration-500 flex items-end">
                 <div className="p-8 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-gold text-xs tracking-widest uppercase mb-2">
-                    {t(project.categoryKey)}
+                    {t(`projectsPage.${project.categoryKey}`)}
                   </p>
                   <h3 className="font-serif text-2xl text-cream mb-1">
                     {t(project.titleKey)}
@@ -81,7 +62,7 @@ const ProjectsSection = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            to={`/${safeLng}/projects`}
+            to={`/${lng}/projects`}
             className="inline-block px-10 py-4 border border-cream/30 text-cream text-sm tracking-widest uppercase hover:bg-cream hover:text-charcoal transition-all duration-300"
           >
             {t("projectsSection.viewAll")}

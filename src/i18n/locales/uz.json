@@ -86,8 +86,23 @@
       "description": "Tabiiy tosh va sakin atmosfera bilan SPA.",
       "fullDescription": "Shveytsariyaning alp sog'liqni saqlash an'analaridan ilhomlanib, bu hammom kundalik spa tajribasiga aylanadi. Tabiiy travertin, isitilgan pollar va integral bug' xususiyatlari tiklanish makoni yaratadi. Minimalist dizayn hissiy tajribalarga — toshning to'qimasiga, suvning iliqligiga, yorug'lik sifatiga e'tibor qaratadi."
     },
+    "bedroomSanctuaryII": {
+  "title": "Yotoqxona II",
+  "description": "Maxsus mebel va ko'p qatlamli yoritish bilan bezatilgan nafis yotoqxona.",
+  "fullDescription": "Bu yotoqxona loyihasi issiqlik va vazminlik o'rtasidagi muvozanatni o'rganadi. Buyurtma shkaflar, puxta tanlangan to'qimalar va ko'p qatlamli yoritish tizimi birgalikda hashamatli va tinch muhitni yaratadi."
+},
+"kitchenHallwayFusion": {
+  "title": "Oshxona va Koridor",
+  "description": "Oshxona funksionalligi va koridor nafosatining uyg'un uyg'unlashuvi.",
+  "fullDescription": "Yagona yaxlit muhit sifatida loyihalashtirilgan bu loyiha yuqori samarali oshxonani qulay koridor bilan birlashtiradi. Tosh ish stollari, cho'tkali mis jihozlar va o'rnatilgan saqlash joylari — ikkala makoni bir kompozitsiyaga bog'laydi."
+},
+"livingRoomII": {
+  "title": "Yashash Xonasi II",
+  "description": "Tabiiy yorug'lik va tekstura asosida qurilgan zamonaviy yashash xonasi.",
+  "fullDescription": "Bu yashash xonasi loyihasida tabiiy yorug'lik, halol materiallar va o'ylangan nisbatlarga ustuvorlik berilgan. Kanop divanlari, travertin yuzalar va buyurtma javonlar — oson elegant va haqiqatan ham qulay makonni yaratadi."
+},
     "grandAtrium": {
-  "title": "Atrium savdo stendi",
+  "title": "Savdo stendi",
   "description": "Savdo markazida joylashgan zamonaviy va ixcham savdo stendi dizayni.",
   "fullDescription": "Ushbu loyiha savdo markazi ichida joylashgan kichik savdo stendi uchun yaratilgan. Dizayn ochiq va e'tiborni tortuvchi shaklda ishlab chiqilgan bo‘lib, mijozlarni yaqinlashishga undaydi. Yorug‘lik elementlari va zamonaviy materiallar mahsulotlarni yanada ajratib ko‘rsatadi, ixcham rejalashtirish esa kichik maydondan maksimal darajada foydalanishga yordam beradi."
 },
@@ -312,9 +327,9 @@
   },
   "seo": {
     "home": {
-      "title": "Interyer Dizayn va Arxitektura Studiyasi",
-      "description": "Mercer Studios Toshkentda funksional va go'zal makonlar yaratadi — turar-joy, tijorat va mehmonxona dizayni."
-    },
+    "title": "Interyer Dizayn va Arxitektura Studiyasi — Toshkent",
+    "description": "Mercer Studios — Toshkentdagi interyer dizayn va arxitektura studiyasi. Turar-joy, tijorat va mehmonxona dizayni. Mercer dizayn, Mercer arxitektura."
+  },
     "projects": {
       "title": "Bizning Loyihalar",
       "description": "Mercer Studios ning interyer va eksteryer dizayn loyihalari portfoliosini ko'ring."

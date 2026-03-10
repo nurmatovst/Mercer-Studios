@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const BASE_URL = "https://mercerstudios.uz";
+const BASE_URL = "https://mercerarch.com";
 const DEFAULT_IMAGE = `${BASE_URL}/logo.jpg`;
 const LANGUAGES = ["en", "uz", "ru"] as const;
 
@@ -37,7 +37,12 @@ const SEO = ({
     "@type": "InteriorDesigner",
     "name": "Mercer Studios",
     "url": BASE_URL,
-    "logo": `${BASE_URL}/logo.jpg`,
+    "logo": {                                    // ✅ add this block
+    "@type": "ImageObject",
+    "url": "https://mercerarch.com/logo.jpg",
+    "width": 512,
+    "height": 512
+  },
     "image": `${BASE_URL}/logo.jpg`,
     "description": "Interior design and architecture studio creating functional and beautiful spaces in Tashkent, Uzbekistan.",
     "telephone": "+998777532611",
@@ -87,6 +92,9 @@ const SEO = ({
 
       {/* ── Canonical ── */}
       <link rel="canonical" href={canonicalUrl} />
+
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/favicon.png" />
 
       {/* ── hreflang ── */}
       {LANGUAGES.map((l) => (

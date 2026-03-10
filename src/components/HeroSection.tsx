@@ -18,19 +18,20 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 md:px-12 max-w-5xl mx-auto">
-        <p className="text-cream/80 text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-up">
+     <div className="relative z-10 text-center px-6 md:px-12 max-w-5xl mx-auto pt-32 pb-24">
+         <p className="text-cream/80 text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase mb-6 leading-relaxed">
           {t("hero.subtitle")}
         </p>
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-tight mb-8 opacity-0 animate-fade-up animation-delay-200">
+        <h1 className="font-serif text-3xl md:text-6xl lg:text-7xl text-cream leading-tight mb-8">
           {t("hero.title1")}{" "}
-          <span className="italic text-gold-light">{t("hero.meaningful")}</span> {t("hero.and")}{" "}
+          <span className="italic text-gold-light">{t("hero.meaningful")}</span>{" "}
+          {t("hero.and")}{" "}
           <span className="italic text-gold-light">{t("hero.beautiful")}</span>
         </h1>
-        <p className="text-cream/80 text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0 animate-fade-up animation-delay-400 leading-relaxed">
+        <p className="text-cream/80 text-base md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
           {t("hero.description")}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up animation-delay-600">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
             className="px-10 py-4 bg-cream text-charcoal text-sm tracking-widest uppercase hover:bg-gold-light transition-all duration-300"
@@ -47,7 +48,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-800">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
         <div className="w-px h-16 bg-cream/30 mx-auto mb-3" />
         <span className="text-cream/50 text-xs tracking-widest uppercase">{t("hero.scroll")}</span>
       </div>

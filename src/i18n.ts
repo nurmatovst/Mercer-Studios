@@ -12,15 +12,21 @@ i18n
     resources: {
       en: { translation: en },
       uz: { translation: uz },
-       ru: { translation: ru },
+      ru: { translation: ru },
     },
     detection: {
-      // SEO uchun eng muhimi: birinchi URL-dan tilni qidiradi
-      order: ["path", "cookie", "localStorage", "navigator"],
-      lookupFromPathIndex: 0, 
-      caches: ["cookie"],
+      // Priority order:
+      // 1. path — e.g. /ru/projects (SEO URLs, returning visitors)
+      // 2. localStorage — remembered choice from previous visit
+      // 3. navigator — browser/OS language (new visitors)
+      // 4. fallback to "en"
+      order: ["path", "localStorage", "navigator"],
+      lookupFromPathIndex: 0,
+      caches: ["localStorage"], // ✅ remember language choice for next visit
     },
     fallbackLng: "en",
+    supportedLngs: ["en", "uz", "ru"], // ✅ reject anything else automatically
+    nonExplicitSupportedLngs: true,    // ✅ allows "ru-RU" to match "ru"
     interpolation: {
       escapeValue: false,
     },

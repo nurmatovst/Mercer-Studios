@@ -12,8 +12,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        // ✅ Split vendor libraries into separate chunks
-        // so your app code and library code cache independently
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
           "i18n-vendor": ["i18next", "react-i18next", "i18next-browser-languagedetector"],
@@ -21,9 +19,7 @@ export default defineConfig({
         },
       },
     },
-    // ✅ Compress output
     minify: "esbuild",
-    // ✅ Warn if any chunk exceeds 500kb
     chunkSizeWarningLimit: 500,
   },
 });

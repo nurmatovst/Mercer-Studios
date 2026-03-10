@@ -87,9 +87,23 @@
       "fullDescription": "Inspired by Swiss alpine wellness traditions, this bathroom becomes a daily spa experience. Natural travertine, heated floors, and integrated steam features create a space for restoration. The minimalist design focuses on sensory experiences—the texture of stone, the warmth of water, the quality of light."
     },
     "grandAtrium": {
-  "title": "Atrium Retail Stall",
+  "title": "Retail Stall",
   "description": "A modern and compact retail stall designed for a shopping mall.",
   "fullDescription": "This project is a retail stall designed for placement inside a shopping mall. The concept focuses on an open and eye-catching layout that naturally attracts passing visitors. Integrated lighting and contemporary materials highlight the displayed products, while the compact design ensures efficient use of the limited space."
+},"bedroomSanctuaryII": {
+  "title": "Bedroom Sanctuary II",
+  "description": "A refined bedroom retreat with bespoke joinery and layered lighting.",
+  "fullDescription": "This bedroom project explores the balance between warmth and restraint. Custom-built wardrobes, carefully selected textiles, and a layered lighting scheme combine to create a deeply personal sleeping environment that feels both luxurious and calm."
+},
+"kitchenHallwayFusion": {
+  "title": "Kitchen & Hallway Fusion",
+  "description": "A seamless blend of kitchen functionality and hallway elegance.",
+  "fullDescription": "Designed as a single cohesive environment, this project merges a high-performance kitchen with a welcoming hallway. Consistent material choices — stone worktops, brushed brass hardware, and integrated storage — unify both spaces into one fluid composition."
+},
+"livingRoomII": {
+  "title": "Living Room II",
+  "description": "A contemporary living space built around natural light and texture.",
+  "fullDescription": "This living room project prioritises natural light, honest materials, and thoughtful proportions. Linen sofas, travertine surfaces, and bespoke shelving create a space that is effortlessly elegant and genuinely liveable."
 },
     "executiveStudy": {
       "title": "Executive Study",
@@ -312,8 +326,8 @@
   },
   "seo": {
   "home": {
-    "title": "Interior Design & Architecture Studio",
-    "description": "Mercer Studios creates functional and beautiful spaces — residential, commercial, and hospitality design in Tashkent."
+    "title": "Interior Design & Architecture Studio Tashkent",
+    "description": "Mercer Studios — interior design and architecture studio in Tashkent, Uzbekistan. Residential, commercial and hospitality spaces. Mercer architecture, Mercer design."
   },
   "projects": {
     "title": "Our Projects",
