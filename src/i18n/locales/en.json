@@ -141,7 +141,8 @@
     "scope": "Scope",
     "gallery": "Project Gallery",
     "previous": "Previous Project",
-    "next": "Next Project"
+    "next": "Next Project",
+    "noImages": "No additional images available"
   },
   "whyChoose": {
     "label": "Why Choose Us",
