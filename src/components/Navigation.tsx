@@ -12,6 +12,14 @@ const Navigation = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
+  useEffect(() => {
+  if (isMobileMenuOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [isMobileMenuOpen]);
+
   // ✅ Extract lang from URL directly — same approach as LanguageSwitcher
   const activeLng = useLng();
 
@@ -60,10 +68,10 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
-    >
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    isScrolled ? "bg-background shadow-sm" : "bg-transparent"
+  } ${isMobileMenuOpen ? "h-screen bg-background" : "h-auto"}`}
+>
       <nav className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-6">
         {/* Logo */}
         <Link
