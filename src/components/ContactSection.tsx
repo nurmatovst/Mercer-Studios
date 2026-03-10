@@ -32,7 +32,7 @@ const ContactSection = () => {
                     href="mailto:hello@maisonandco.com"
                     className="text-foreground hover:text-gold transition-colors"
                   >
-                    hello@mercerstudios.com
+                    hello@mercerarch.com
                   </a>
                 </div>
               </div>

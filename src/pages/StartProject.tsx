@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Phone, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "@/hooks/use-toast";
@@ -7,7 +7,6 @@ import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLng } from "@/hooks/useLng";
-
 
 type Step = 1 | 2 | 3 | 4 | 5;
 
@@ -22,7 +21,6 @@ const colorPalettes = [
 
 const StartProject = () => {
   const lng = useLng();
-  const safeLng = lng || "en"; // ✅ fallback
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [formData, setFormData] = useState({
@@ -82,18 +80,12 @@ const StartProject = () => {
 
   const canProceed = () => {
     switch (currentStep) {
-      case 1:
-        return formData.projectType !== "";
-      case 2:
-        return formData.style !== "";
-      case 3:
-        return formData.colorPalette !== "";
-      case 4:
-        return formData.budget !== "" && formData.size !== "";
-      case 5:
-        return formData.name !== "" && (formData.email !== "" || formData.phone !== "");
-      default:
-        return false;
+      case 1: return formData.projectType !== "";
+      case 2: return formData.style !== "";
+      case 3: return formData.colorPalette !== "";
+      case 4: return formData.budget !== "" && formData.size !== "";
+      case 5: return formData.name !== "" && (formData.email !== "" || formData.phone !== "");
+      default: return false;
     }
   };
 
@@ -106,29 +98,19 @@ const StartProject = () => {
       });
       return;
     }
-
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1500));
-
     toast({
       title: t("startProject.toast.successTitle"),
       description: t("startProject.toast.successDescription"),
     });
-
     setIsSubmitting(false);
-  };
-
-  const formatBudget = (value: string) => {
-    const num = value.replace(/[^\d]/g, "");
-    if (!num) return "";
-    return new Intl.NumberFormat("en-US").format(parseInt(num));
   };
 
   return (
     <main className="min-h-screen bg-background">
-      {/* ✅ SEO added here — right at the top inside <main> */}
       <SEO
-        lng={lng!}
+        lng={lng}
         title={t("seo.startProject.title")}
         description={t("seo.startProject.description")}
         path="start-project"
@@ -140,7 +122,7 @@ const StartProject = () => {
       <section className="pt-32 pb-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <Link
-            to="/"
+            to={`/${lng}`}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft size={16} />
@@ -159,38 +141,45 @@ const StartProject = () => {
       </section>
 
       {/* Free Consultation Banner */}
+      {/* ✅ Fix: changed to flex-col on mobile, items-start, added min-w-0 to text div */}
       <section className="px-6 md:px-12 lg:px-24 pb-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/20 p-8 md:p-10">
-            <div className="flex flex-col md:flex-row md:items-center gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-8 h-8 text-gold" />
+            <div className="flex flex-col gap-6">
+              {/* Top row: icon + text */}
+              <div className="flex flex-col sm:flex-row gap-6 sm:items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
+                    <Sparkles className="w-8 h-8 text-gold" />
+                  </div>
+                </div>
+                {/* ✅ min-w-0 prevents text from overflowing on Russian */}
+                <div className="flex-grow min-w-0">
+                  <p className="text-gold text-xs tracking-[0.2em] uppercase mb-2">
+                    {t("startProject.freeConsultation.label")}
+                  </p>
+                  <h3 className="font-serif text-xl md:text-2xl text-foreground mb-3 break-words">
+                    {t("startProject.freeConsultation.title")}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {t("startProject.freeConsultation.description")}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                    {["1", "2", "3", "4"].map((num) => (
+                      <div key={num} className="flex items-start gap-2 text-sm text-foreground">
+                        <Check size={14} className="text-gold flex-shrink-0 mt-0.5" />
+                        <span>{t(`startProject.freeConsultation.benefits.${num}`)}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="flex-grow">
-                <p className="text-gold text-xs tracking-[0.2em] uppercase mb-2">
-                  {t("startProject.freeConsultation.label")}
-                </p>
-                <h3 className="font-serif text-2xl text-foreground mb-3">
-                  {t("startProject.freeConsultation.title")}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {t("startProject.freeConsultation.description")}
-                </p>
-                <div className="grid grid-cols-2 gap-2 mb-4">
-                  {["1", "2", "3", "4"].map((num) => (
-                    <div key={num} className="flex items-center gap-2 text-sm text-foreground">
-                      <Check size={14} className="text-gold" />
-                      <span>{t(`startProject.freeConsultation.benefits.${num}`)}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex-shrink-0">
+
+              {/* Button — full width on mobile */}
+              <div>
                 <Link
-                  to={`/${safeLng}/consultation`}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-charcoal text-sm tracking-widest uppercase hover:bg-gold-light transition-colors"
+                  to={`/${lng}/consultation`}
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-gold text-charcoal text-sm tracking-widest uppercase hover:bg-gold-light transition-colors"
                 >
                   <Phone size={16} />
                   {t("startProject.freeConsultation.button")}
@@ -200,8 +189,6 @@ const StartProject = () => {
           </div>
         </div>
       </section>
-
-     
 
       <Footer />
     </main>

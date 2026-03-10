@@ -142,7 +142,8 @@
     "scope": "Qamrov",
     "gallery": "Loyiha Galereyasi",
     "previous": "Oldingi Loyiha",
-    "next": "Keyingi Loyiha"
+    "next": "Keyingi Loyiha",
+    "noImages": "Qo'shimcha rasmlar mavjud emas"
   },
   "whyChoose": {
     "label": "Nima Uchun Biz",

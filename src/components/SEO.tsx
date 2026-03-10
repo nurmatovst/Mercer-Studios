@@ -46,7 +46,7 @@ const SEO = ({
     "image": `${BASE_URL}/logo.jpg`,
     "description": "Interior design and architecture studio creating functional and beautiful spaces in Tashkent, Uzbekistan.",
     "telephone": "+998777532611",
-    "email": "hello@mercerstudios.com",
+    "email": "hello@mercerarch.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Tashkent",
@@ -118,7 +118,7 @@ const SEO = ({
 
       {/* ── Twitter ── */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@MercerStudios" />
+      <meta name="twitter:site" content="@mercerarch.com" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />

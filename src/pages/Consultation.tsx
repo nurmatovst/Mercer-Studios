@@ -1,9 +1,3 @@
-
-
-
-// ─────────────────────────────────────────────
-// Consultation.tsx
-// ─────────────────────────────────────────────
 import { useTranslation } from 'react-i18next';
 import { Calendar, MessageCircle, Phone, Mail, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,32 +9,33 @@ import { useLng } from '@/hooks/useLng';
 
 const Consultation = () => {
   const { t } = useTranslation();
-const lng = useLng();
-    const safeLng = lng || "en"; // ✅ fallback
+  const lng = useLng();
 
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
-      {/* ✅ SEO added here — right after the opening <div> */}
       <SEO
-        lng={lng!}
+        lng={lng}
         title={t("seo.consultation.title")}
         description={t("seo.consultation.description")}
         path="consultation"
       />
 
       <Navigation />
-      
+
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6">
-          <Link 
-            to={`/${safeLng}/start-project`} 
+          <Link
+            to={`/${lng}/start-project`}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -58,13 +53,13 @@ const lng = useLng();
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Calendly Section */}
-            <div className="bg-card border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-4 md:p-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <Calendar className="w-6 h-6 text-accent" />
                 </div>
-                <div>
-                  <h2 className="font-display text-2xl text-foreground">
+                <div className="min-w-0">
+                  <h2 className="font-display text-xl md:text-2xl text-foreground">
                     {t('consultation.calendly.title')}
                   </h2>
                   <p className="text-muted-foreground text-sm">
@@ -72,11 +67,15 @@ const lng = useLng();
                   </p>
                 </div>
               </div>
-              
-              {/* Calendly Embed Placeholder - Replace with your Calendly URL */}
-              <div className="bg-secondary/30 rounded-lg h-[500px] flex items-center justify-center border border-border">
-   
-<div className="calendly-inline-widget" data-url="https://calendly.com/nurmatovsaidamirxont/mercer-consultations?text_color=3e3c20&primary_color=1a1a1a"  style={{ minWidth: "480px", height: "480px" }}></div>
+
+              {/* ✅ Calendly fix: overflow-x-auto wrapper so it scrolls on small screens
+                  instead of breaking the layout. Removed fixed minWidth from inline style. */}
+              <div className="overflow-x-auto -mx-4 md:mx-0">
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/nurmatovsaidamirxont/mercer-consultations?text_color=3e3c20&primary_color=1a1a1a"
+                  style={{ minWidth: "320px", height: "500px" }}
+                />
               </div>
             </div>
 
@@ -92,51 +91,52 @@ const lng = useLng();
 
                 <div className="space-y-6">
                   {/* Telegram */}
-                  <a 
-                    href="https://t.me/mercer_architects" 
-                    target="_blank" 
+                  <a
+                    href="https://t.me/mercer_architects"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg border border-border hover:border-accent/50 hover:bg-secondary/50 transition-all group"
                   >
-                    <div className="w-12 h-12 bg-[#0088cc]/10 rounded-full flex items-center justify-center group-hover:bg-[#0088cc]/20 transition-colors">
+                    <div className="w-12 h-12 bg-[#0088cc]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#0088cc]/20 transition-colors">
                       <MessageCircle className="w-6 h-6 text-[#0088cc]" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-foreground">Telegram</h3>
                       <p className="text-muted-foreground text-sm">@mercermanager</p>
                     </div>
-                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">→</span>
                   </a>
 
                   {/* Phone */}
-                  <a 
-                    href="tel:+998901234567" 
+                  <a
+                    href="tel:+998777532611"
                     className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg border border-border hover:border-accent/50 hover:bg-secondary/50 transition-all group"
                   >
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-foreground">{t('consultation.contact.phone')}</h3>
                       <p className="text-muted-foreground text-sm">+998 77 753 26 11</p>
                     </div>
-                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">→</span>
                   </a>
 
                   {/* Email */}
-                  <a 
-                    href="mailto:hello@mercerstudios.com" 
-                    target='_blank'
+                  <a
+                    href="mailto:hello@mercerarch.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-secondary/30 rounded-lg border border-border hover:border-accent/50 hover:bg-secondary/50 transition-all group"
                   >
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-foreground">{t('consultation.contact.email')}</h3>
-                      <p className="text-muted-foreground text-sm">hello@mercerstudios.com</p>
+                      <p className="text-muted-foreground text-sm">hello@mercerarch.com</p>
                     </div>
-                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">→</span>
                   </a>
                 </div>
               </div>

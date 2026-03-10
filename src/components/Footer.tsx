@@ -1,20 +1,19 @@
-import { Instagram, Linkedin, Facebook } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Telegram } from "@/assets/Telegram";
 import { useLng } from "@/hooks/useLng";
 
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { t } = useTranslation();
-  const safeLng = useLng(); // ✅ use the custom hook
+  const lng = useLng();
 
   const quickLinks = [
     { key: "about", href: "#about" },
     { key: "approach", href: "#approach" },
     { key: "services", href: "#services" },
-    { key: "projects", href: `${safeLng}/projects`, isRoute: true },
+    { key: "projects", href: `/${lng}/projects`, isRoute: true }, // ✅ fixed: was missing leading /
     { key: "contact", href: "#contact" },
   ];
 
@@ -24,7 +23,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="font-serif text-2xl text-cream mb-6 inline-block">
+            <Link to={`/${lng}`} className="font-serif text-2xl text-cream mb-6 inline-block">
               Mercer <span className="text-gold">Studios</span>
             </Link>
             <p className="text-cream/60 max-w-sm leading-relaxed">
@@ -69,6 +68,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/mercer_architecture/#"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 border border-cream/20 flex items-center justify-center text-cream/60 hover:text-gold hover:border-gold transition-colors"
                 aria-label="Instagram"
               >
@@ -77,6 +77,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/mercer-architectureuz"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 border border-cream/20 flex items-center justify-center text-cream/60 hover:text-gold hover:border-gold transition-colors"
                 aria-label="LinkedIn"
               >
@@ -85,6 +86,7 @@ const Footer = () => {
               <a
                 href="https://t.me/mercer_architects"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 border border-cream/20 flex items-center justify-center text-cream/60 hover:text-gold hover:border-gold transition-colors"
                 aria-label="Telegram"
               >
